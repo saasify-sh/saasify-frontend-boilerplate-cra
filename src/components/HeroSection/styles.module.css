@@ -1,0 +1,7 @@
+.image {
+  max-width: 100%;
+  width: 640px;
+  margin-bottom: 4em;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,90 @@
+.docs-page {
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.docs-page :global(.api-content) {
+  border-left: 1px solid #e2e2e2;
+}
+
+.docs-page :global(.api-content) > div {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 0;
+  padding-bottom: 22px;
+  padding-top: 24px;
+}
+
+.docs-page :global(.api-content) > div > * {
+  margin-bottom: 8px;
+}
+
+.docs-page :global(.api-content) > div > *:last-of-type {
+  margin-bottom: 0;
+}
+
+.docs-page :global(.api-content) > div:last-of-type {
+  border-bottom: 0;
+}
+
+.docs-page p {
+  font-size: 15px;
+  color: #333;
+}
+
+.docs-page :global(.api-content) :global(.react-tabs__tab-panel) p {
+  color: #d2d2d6 !important;
+}
+
+.docs-page h1,
+.docs-page h2,
+.docs-page h3,
+.docs-page h4,
+.docs-page h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.docs-page h3,
+.docs-page h4,
+.docs-page h5 {
+  margin-bottom: 8px;
+}
+
+.docs-page div[data-section-id^='operation/'] > div > div:nth-of-type(2) h3 {
+  color: #fff;
+}
+
+.docs-page div[data-section-id^='operation/'] h5 {
+  margin: 0;
+}
+
+.docs-page :global(.react-tabs__tab-panel) > div > pre {
+  overflow: hidden;
+}
+
+.docs-page :global(.api-content) > div:first-of-type {
+  display: none;
+}
+
+.docs-page :global(.react-tabs__tab-panel) {
+  border-radius: 5px;
+}
+
+.docs-page div[data-section-id^='operation/'] h3 {
+  color: black !important;
+  margin-top: 24px;
+}
+
+.docs-page :global(.hiuczA):last-child {
+  min-height: initial;
+  margin-bottom: 4em;
+}
+
+.fill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

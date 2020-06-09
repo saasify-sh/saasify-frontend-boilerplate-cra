@@ -1,0 +1,232 @@
+{
+  "enabled": true,
+  "published": true,
+  "description": "Powered by Saasify",
+  "readme": "",
+  "keywords": [],
+  "hash": "7630b7e0",
+  "user": "5d5b477eb5fab1199c927a36",
+  "team": "5dbef994fb93dc256540b0ce",
+  "project": {
+    "keywords": [],
+    "description": "Powered by Saasify",
+    "applicationFeePercent": 20,
+    "isStripeConnectEnabled": false,
+    "name": "test-hello-world",
+    "user": "5d5b477eb5fab1199c927a36",
+    "team": "5dbef994fb93dc256540b0ce",
+    "publishedVersions": [
+      {
+        "deployment": "dev/test-hello-world@7630b7e0",
+        "version": "0.1.0"
+      }
+    ],
+    "createdAt": "2020-01-28T02:45:22.530Z",
+    "updatedAt": "2020-06-09T01:01:40.346Z",
+    "lastDeployment": "dev/test-hello-world@7630b7e0",
+    "lastPublishedDeployment": "dev/test-hello-world@7630b7e0",
+    "lastPublishedVersion": "0.1.0",
+    "stripeBaseProduct": "prod_Gd0xcno6pQ83RP",
+    "stripeRequestProduct": "prod_Gd0xrLyqV4MXO5",
+    "stripeMetricProducts": {},
+    "saasUrl": "http://dev_test-hello-world.localhost:3000",
+    "stripeConnectParams": [],
+    "id": "dev/test-hello-world"
+  },
+  "version": "0.1.0",
+  "pricingPlans": [
+    {
+      "features": [],
+      "auth": false,
+      "amount": 0,
+      "requests": {
+        "slug": "requests",
+        "amount": 0,
+        "usageType": "metered",
+        "billingScheme": "per_unit",
+        "tiersMode": "graduated",
+        "rateLimit": null,
+        "tiers": [],
+        "label": "requests",
+        "unitLabel": "request"
+      },
+      "rateLimit": {
+        "enabled": true,
+        "requestsInterval": 3600,
+        "requestsMaxPerInterval": 25
+      },
+      "metrics": [],
+      "metricIds": {},
+      "_stripeMetricPlansTest": {},
+      "_stripeMetricPlansLive": {},
+      "name": "Free",
+      "slug": "free",
+      "baseId": "base:843c6f79d2c7ca5c7c9ec0f2fa3b74473704e5df640a639a7c659393e0204193",
+      "requestsId": "requests:b579ffb7394fcdc7826f72739013d18c322ff6d8287509d61e7d4d16aba56387"
+    },
+    {
+      "features": [],
+      "auth": true,
+      "amount": 99,
+      "requests": {
+        "slug": "requests",
+        "amount": 0.04,
+        "usageType": "metered",
+        "billingScheme": "per_unit",
+        "tiersMode": "graduated",
+        "rateLimit": null,
+        "tiers": [],
+        "label": "requests",
+        "unitLabel": "request"
+      },
+      "rateLimit": null,
+      "metrics": [],
+      "metricIds": {},
+      "_stripeMetricPlansTest": {},
+      "_stripeMetricPlansLive": {},
+      "name": "Unlimited",
+      "slug": "unlimited",
+      "baseId": "base:405d79d74f9ac5d4a5101e33c5496406b0ffca9cb4f7054853fcfed1ab713e85",
+      "requestsId": "requests:2a997dfbe4ea877e4008ed890b0f1f0899062ac70a99f845024453f8d96268f6"
+    }
+  ],
+  "coupons": [],
+  "services": [
+    {
+      "name": "index",
+      "httpMethod": "get",
+      "adaptor": "typescript",
+      "immutable": true,
+      "reportUsage": true,
+      "examples": [
+        {
+          "isGeneratedInput": true,
+          "isGeneratedOutput": true,
+          "inputContentType": "application/json",
+          "outputContentType": "application/json; charset=utf-8",
+          "name": "Basic",
+          "input": {},
+          "output": "Hello World!"
+        },
+        {
+          "isGeneratedInput": true,
+          "isGeneratedOutput": true,
+          "inputContentType": "application/json",
+          "outputContentType": "application/json; charset=utf-8",
+          "name": "Advanced",
+          "input": {
+            "name": "World"
+          },
+          "output": "Hello World!"
+        }
+      ],
+      "config": {},
+      "headers": {},
+      "pricingPlanConfig": {},
+      "src": "index.ts",
+      "path": "/index",
+      "createdAt": "2020-06-09T01:01:11.676Z",
+      "updatedAt": "2020-06-09T01:01:11.676Z",
+      "pathExpress": "/index",
+      "definition": {
+        "config": {
+          "defaultExport": true,
+          "language": "typescript"
+        },
+        "params": {
+          "http": false,
+          "context": false,
+          "order": [
+            "name"
+          ],
+          "schema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "default": "World"
+              }
+            },
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        },
+        "returns": {
+          "async": false,
+          "http": false,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "result": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        },
+        "version": "1.1.0",
+        "title": "index"
+      },
+      "url": "http://localhost:5100/dev/test-hello-world@7630b7e0/index",
+      "route": "/dev/test-hello-world@7630b7e0/index"
+    }
+  ],
+  "saas": {
+    "headerName": null,
+    "logo": "https://storage.googleapis.com/saasify-uploads-prod/f218cc888f902eff57c42657c5a5a1cbaee2594c.svg",
+    "logoLight": null,
+    "favicon": "https://storage.googleapis.com/saasify-uploads-prod/d7c93b5f48fe72915d5cea262bee510805324d9f.ico",
+    "exampleImage": null,
+    "scripts": [],
+    "htmlPreBody": [],
+    "htmlPostBody": [],
+    "styles": [],
+    "features": [],
+    "name": "test-hello-world",
+    "heading": "test-hello-world",
+    "subheading": "Powered by Saasify",
+    "theme": {
+      "name": "waves",
+      "backgroundImage": null
+    }
+  },
+  "createdAt": "2020-06-09T01:01:11.676Z",
+  "updatedAt": "2020-06-09T01:01:40.241Z",
+  "url": "http://localhost:5100/dev/test-hello-world@7630b7e0",
+  "openApiUrl": "http://localhost:5000/1/deployments/openapi/dev/test-hello-world@7630b7e0",
+  "saasUrl": "https://dev_test-hello-world_7630b7e0.saasify.sh",
+  "authProviders": {
+    "google": {
+      "enabled": false,
+      "provider": "google",
+      "scopes": []
+    },
+    "github": {
+      "enabled": true,
+      "provider": "github",
+      "scopes": []
+    },
+    "spotify": {
+      "enabled": false,
+      "provider": "spotify",
+      "scopes": []
+    },
+    "linkedin": {
+      "enabled": false,
+      "provider": "linkedin",
+      "scopes": []
+    },
+    "twitter": {
+      "enabled": false,
+      "provider": "twitter",
+      "scopes": []
+    },
+    "default": {
+      "enabled": true,
+      "provider": "default",
+      "scopes": []
+    }
+  },
+  "id": "dev/test-hello-world@7630b7e0"
+}

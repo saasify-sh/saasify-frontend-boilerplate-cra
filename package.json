@@ -1,0 +1,83 @@
+{
+  "name": "saasify-frontend-boilerplate-cra",
+  "private": true,
+  "description": "Frontend webapp boilerplate for Saasify products powered by CRA.",
+  "author": "Saasify <dev@saasify.sh>",
+  "repository": "saasify-sh/saasify-frontend-boilerplate-cra",
+  "homepage": "https://saasify.sh",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "update-deployment": "saasify get $SAASIFY_DEPLOYMENT_ID -o src/lib/deployment.json",
+    "start": "SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
+    "build": "SKIP_PREFLIGHT_CHECK=true react-app-rewired build",
+    "test:watch": "SKIP_PREFLIGHT_CHECK=true react-app-rewired test",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
+  },
+  "keywords": [
+    "saasify",
+    "saas"
+  ],
+  "dependencies": {
+    "@saasify/redoc": "^2.0.2",
+    "antd": "^3.23.5",
+    "copy-text-to-clipboard": "^2.1.0",
+    "core-js": "^3.2.1",
+    "dangerously-set-html-content": "^1.0.3",
+    "downloadjs": "^1.4.7",
+    "is-url": "^1.2.4",
+    "jsesc": "^2.5.2",
+    "mime-types": "^2.1.26",
+    "mobx": "^5.13.1",
+    "mobx-react": "^6.1.3",
+    "prop-types": "^15.7.2",
+    "qs": "^6.9.1",
+    "react": "^16.10.1",
+    "react-body-classname": "^1.3.0",
+    "react-dom": "^16.10.1",
+    "react-error-boundary": "^1.2.5",
+    "react-ga": "^2.7.0",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.2.2",
+    "react-router-dom": "^5.1.2",
+    "react-saasify": "^1.20.1",
+    "react-scripts": "2.1.8",
+    "remove-markdown": "^0.3.0",
+    "styled-components": "^4.3.2",
+    "swagger-ui-react": "^3.25.0",
+    "titleize": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "compression-webpack-plugin": "^3.0.0",
+    "customize-cra": "^0.5.0",
+    "directory-named-webpack-plugin": "^4.0.1",
+    "npm-run-all": "^4.1.5",
+    "react-app-rewired": "^2.1.1",
+    "source-map-explorer": "^2.0.1",
+    "webpack-bundle-analyzer": "^3.4.1",
+    "webpack-cli": "^3.3.8",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

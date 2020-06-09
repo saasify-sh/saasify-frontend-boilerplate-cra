@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Simple",
+    "desc": "We only focus on doing one thing well and keeping things as simple as possible.",
+    "icon": "confirmation"
+  },
+  {
+    "name": "Get Going Fast",
+    "desc": "Try out the API for FREE and then sign up with your GitHub account and Stripe.",
+    "icon": "developer_activity"
+  },
+  {
+    "name": "Cost Effective",
+    "desc": "Building on top of serverless functions means you'll only pay for the API calls you actually use.",
+    "icon": "stripe_payments"
+  },
+  {
+    "name": "Documentation",
+    "desc": "Thorough docs that come with easy-to-use examples for many common programming languages.",
+    "icon": "code_review"
+  },
+  {
+    "name": "Support",
+    "desc": "We offer support via email, an open slack, and GitHub issues.",
+    "icon": "questions"
+  }
+]

@@ -1,0 +1,17 @@
+.error > div > h5 {
+  display: inline-block;
+  max-width: 800px !important;
+}
+
+.illustration {
+  min-width: 128px;
+  max-width: 360px;
+}
+
+.desc {
+  font-size: 0.9em;
+}
+
+.detail {
+  font-size: 0.9em;
+}
