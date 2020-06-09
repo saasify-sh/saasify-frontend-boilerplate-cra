@@ -1,0 +1,4 @@
+.snapshots/
+build/
+dist/
+node_modules/

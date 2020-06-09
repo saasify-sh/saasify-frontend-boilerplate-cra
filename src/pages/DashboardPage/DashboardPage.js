@@ -17,14 +17,11 @@ import {
 import styles from './styles.module.css'
 
 @withTracker
-@inject('config')
 @inject('auth')
 @observer
 export class DashboardPage extends Component {
   render() {
-    const { config, auth } = this.props
-    const { deployment } = config
-    const { saas } = deployment
+    const { auth } = this.props
 
     if (!plans.context.hasFreeTier && !auth.consumer?.plan) {
       return <Redirect to={`/checkout?plan=${plans[0].slug}`} />
