@@ -16,7 +16,8 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "test": "run-s test:*",
     "test:lint": "eslint .",
-    "test:prettier": "prettier '**/*.js' --check"
+    "test:prettier": "prettier '**/*.js' --check",
+    "posttest": "run-s build"
   },
   "keywords": [
     "saasify",
@@ -27,6 +28,7 @@
     "antd": "^3.23.5",
     "copy-text-to-clipboard": "^2.1.0",
     "core-js": "^3.2.1",
+    "css-var": "^1.0.0-b0",
     "dangerously-set-html-content": "^1.0.3",
     "downloadjs": "^1.4.7",
     "is-url": "^1.2.4",
