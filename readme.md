@@ -6,17 +6,17 @@
 
 # Saasify Frontend Boilerplate
 
-> Frontend boilerplate for Saasify products built using CRA.
+> CRA frontend boilerplate for [Saasify](https://saasify.sh) products.
 
 ## Overview
 
-If you're just getting started with Saasify, we recommend using the built-in frontend "SaaS-in-a-box" that's less customizable but also much quicker to get off the ground.
+If you're just getting started with Saasify, we recommend using the built-in "SaaS-in-a-box" frontend. It's less customizable, but it's also much quicker to get off the ground.
 
-Once you're ready for more customization, this boilerplate gives you have full control over your Saasify product's frontend.
+Once you're ready for more customization, this boilerplate gives you have full control over your product's frontend.
 
 Some common use cases include:
 
-- Customizing your product's landing page and marketing messaging.
+- Customizing your product's landing page and marketing.
 - Deploying your product's webapp to be hosted on a custom domain.
 - Adding custom UX to the webapp once a user is signed up.
 

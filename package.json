@@ -1,7 +1,7 @@
 {
   "name": "saasify-frontend-boilerplate-cra",
   "private": true,
-  "description": "Frontend webapp boilerplate for Saasify products powered by CRA.",
+  "description": "CRA frontend boilerplate for Saasify products.",
   "author": "Saasify <dev@saasify.sh>",
   "repository": "saasify-sh/saasify-frontend-boilerplate-cra",
   "homepage": "https://saasify.sh",
