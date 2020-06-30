@@ -11,7 +11,7 @@ export class EnterpriseSection extends Component {
         <p>
           For questions regarding bulk pricing, dedicated support,
           customization, self-hosting, or other enterprise considerations,
-          please <a href='mailto:info@saasify.sh'>contact us</a>.
+          please <a href='mailto:support@reacher.email'>contact us</a>.
         </p>
 
         <UndrawSVG

@@ -1,0 +1,41 @@
+{
+  "isGeneratedInput": false,
+  "isGeneratedOutput": true,
+  "inputContentType": "application/json",
+  "outputContentType": "application/json",
+  "input": {
+    "to_email": "test@gmail.com"
+  },
+  "name": "Basic",
+  "output": {
+    "input": "test@gmail.com",
+    "is_reachable": "risky",
+    "misc": {
+      "is_disposable": false,
+      "is_role_account": true
+    },
+    "mx": {
+      "accepts_mail": true,
+      "records": [
+        "alt3.gmail-smtp-in.l.google.com.",
+        "gmail-smtp-in.l.google.com.",
+        "alt4.gmail-smtp-in.l.google.com.",
+        "alt2.gmail-smtp-in.l.google.com.",
+        "alt1.gmail-smtp-in.l.google.com."
+      ]
+    },
+    "smtp": {
+      "can_connect_smtp": true,
+      "has_full_inbox": false,
+      "is_catch_all": false,
+      "is_deliverable": false,
+      "is_disabled": false
+    },
+    "syntax": {
+      "address": "test@gmail.com",
+      "domain": "gmail.com",
+      "is_valid_syntax": true,
+      "username": "test"
+    }
+  }
+}

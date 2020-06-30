@@ -1,48 +1,73 @@
 {
   "enabled": true,
-  "published": true,
+  "published": false,
   "description": "Powered by Saasify",
-  "readme": "",
+  "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [FAQ](https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
   "keywords": [],
-  "hash": "7630b7e0",
-  "user": "5d5b477eb5fab1199c927a36",
-  "team": "5dbef994fb93dc256540b0ce",
+  "hash": "5353971a",
+  "user": "5ea9834bc5a438003c319d1e",
   "project": {
     "keywords": [],
     "description": "Powered by Saasify",
-    "applicationFeePercent": 20,
-    "isStripeConnectEnabled": false,
-    "name": "test-hello-world",
-    "user": "5d5b477eb5fab1199c927a36",
-    "team": "5dbef994fb93dc256540b0ce",
+    "applicationFeePercent": 5,
+    "isStripeConnectEnabled": true,
+    "name": "reacher",
+    "user": "5ea9834bc5a438003c319d1e",
+    "team": null,
     "publishedVersions": [
       {
-        "deployment": "dev/test-hello-world@7630b7e0",
+        "deployment": "amaurymartiny/reacher@a475cf12",
         "version": "0.1.0"
+      },
+      {
+        "deployment": "amaurymartiny/reacher@2615e5c0",
+        "version": "0.1.1"
+      },
+      {
+        "deployment": "amaurymartiny/reacher@c8f25dd6",
+        "version": "0.1.2"
+      },
+      {
+        "deployment": "amaurymartiny/reacher@78c46028",
+        "version": "0.1.3"
+      },
+      {
+        "deployment": "amaurymartiny/reacher@91a0a1cf",
+        "version": "0.1.4"
       }
     ],
-    "createdAt": "2020-01-28T02:45:22.530Z",
-    "updatedAt": "2020-06-09T01:01:40.346Z",
-    "lastDeployment": "dev/test-hello-world@7630b7e0",
-    "lastPublishedDeployment": "dev/test-hello-world@7630b7e0",
-    "lastPublishedVersion": "0.1.0",
-    "stripeBaseProduct": "prod_Gd0xcno6pQ83RP",
-    "stripeRequestProduct": "prod_Gd0xrLyqV4MXO5",
+    "createdAt": "2020-04-30T19:26:19.316Z",
+    "updatedAt": "2020-06-30T21:12:40.480Z",
+    "lastDeployment": "amaurymartiny/reacher@5353971a",
+    "alias": "reacher.email",
+    "lastPublishedDeployment": "amaurymartiny/reacher@91a0a1cf",
+    "lastPublishedVersion": "0.1.4",
+    "stripeBaseProduct": "prod_HGYDgL6YePm4Rq",
+    "stripeRequestProduct": "prod_HGYD0bZ1NHWh6F",
     "stripeMetricProducts": {},
-    "saasUrl": "http://dev_test-hello-world.localhost:3000",
-    "stripeConnectParams": [],
-    "id": "dev/test-hello-world"
+    "saasUrl": "https://amaurymartiny_reacher.saasify.sh",
+    "aliasUrl": "https://reacher.email",
+    "stripeConnectParams": [
+      {
+        "stripe_account": "acct_1GdjpUA852XqldwX"
+      }
+    ],
+    "id": "amaurymartiny/reacher"
   },
-  "version": "0.1.0",
+  "version": "0.1.5",
   "pricingPlans": [
     {
-      "features": [],
+      "features": [
+        "**50 emails for free** per month.",
+        "[Full-featured](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d) email verifications.",
+        "No credit card required."
+      ],
       "auth": false,
       "amount": 0,
       "requests": {
         "slug": "requests",
         "amount": 0,
-        "usageType": "metered",
+        "usageType": "licensed",
         "billingScheme": "per_unit",
         "tiersMode": "graduated",
         "rateLimit": null,
@@ -52,30 +77,85 @@
       },
       "rateLimit": {
         "enabled": true,
-        "requestsInterval": 3600,
-        "requestsMaxPerInterval": 25
+        "requestsInterval": 2628000,
+        "requestsMaxPerInterval": 50
       },
       "metrics": [],
       "metricIds": {},
       "_stripeMetricPlansTest": {},
       "_stripeMetricPlansLive": {},
-      "name": "Free",
+      "name": "Free Tier",
       "slug": "free",
-      "baseId": "base:843c6f79d2c7ca5c7c9ec0f2fa3b74473704e5df640a639a7c659393e0204193",
-      "requestsId": "requests:b579ffb7394fcdc7826f72739013d18c322ff6d8287509d61e7d4d16aba56387"
+      "baseId": "base:6b42d144f30fb828e813236b6bee2ba5bb51ec89725a58a1c4e11bb81c47a702:acct_1GdjpUA852XqldwX",
+      "requestsId": "requests:5aff4c3ef596b8dc9b0f4865b478d5e0139f907ca7dadf6929feb36bb88016be:acct_1GdjpUA852XqldwX"
     },
     {
-      "features": [],
+      "features": [
+        "See [Full Pricing Details](https://www.notion.so/Enterprise-Pricing-dd54b64b2fcc43c1811ead80e004a1e2), we offer flexible pricing options.",
+        "The more you verify, the **lower your total cost**.",
+        "[Full-featured](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d) email verifications.",
+        "**Priority** customer support.",
+        "Cancel anytime."
+      ],
       "auth": true,
-      "amount": 99,
+      "amount": 0,
       "requests": {
         "slug": "requests",
-        "amount": 0.04,
-        "usageType": "metered",
-        "billingScheme": "per_unit",
-        "tiersMode": "graduated",
+        "amount": 0,
+        "usageType": "licensed",
+        "billingScheme": "tiered",
+        "tiersMode": "volume",
         "rateLimit": null,
-        "tiers": [],
+        "tiers": [
+          {
+            "upTo": "999",
+            "unitAmount": 0.467
+          },
+          {
+            "upTo": "2499",
+            "unitAmount": 0.387
+          },
+          {
+            "upTo": "4999",
+            "unitAmount": 0.327
+          },
+          {
+            "upTo": "9999",
+            "unitAmount": 0.23
+          },
+          {
+            "upTo": "24999",
+            "unitAmount": 0.198
+          },
+          {
+            "upTo": "49999",
+            "unitAmount": 0.133
+          },
+          {
+            "upTo": "99999",
+            "unitAmount": 0.1
+          },
+          {
+            "upTo": "249999",
+            "unitAmount": 0.067
+          },
+          {
+            "upTo": "499999",
+            "unitAmount": 0.053
+          },
+          {
+            "upTo": "999999",
+            "unitAmount": 0.042
+          },
+          {
+            "upTo": "2499999",
+            "unitAmount": 0.033
+          },
+          {
+            "upTo": "inf",
+            "unitAmount": 0.025
+          }
+        ],
         "label": "requests",
         "unitLabel": "request"
       },
@@ -84,127 +164,150 @@
       "metricIds": {},
       "_stripeMetricPlansTest": {},
       "_stripeMetricPlansLive": {},
-      "name": "Unlimited",
-      "slug": "unlimited",
-      "baseId": "base:405d79d74f9ac5d4a5101e33c5496406b0ffca9cb4f7054853fcfed1ab713e85",
-      "requestsId": "requests:2a997dfbe4ea877e4008ed890b0f1f0899062ac70a99f845024453f8d96268f6"
+      "name": "Pay-As-You-Go",
+      "slug": "pay-as-you-go-v1",
+      "baseId": "base:40adb9cf2a92ba804fda1ba128d95db1bd16f872eb58eacc358ac7921dea290c:acct_1GdjpUA852XqldwX",
+      "requestsId": "requests:68fad0e319d86af0dfb0df3673a4526db59c78350b1d22c96bbf1a9ed0c7e483:acct_1GdjpUA852XqldwX"
     }
   ],
   "coupons": [],
   "services": [
     {
-      "name": "index",
-      "httpMethod": "get",
-      "adaptor": "typescript",
-      "immutable": true,
+      "name": "post-check-email",
+      "httpMethod": "post",
+      "adaptor": "openapi",
+      "immutable": false,
       "reportUsage": true,
-      "examples": [
-        {
-          "isGeneratedInput": true,
-          "isGeneratedOutput": true,
-          "inputContentType": "application/json",
-          "outputContentType": "application/json; charset=utf-8",
-          "name": "Basic",
-          "input": {},
-          "output": "Hello World!"
-        },
-        {
-          "isGeneratedInput": true,
-          "isGeneratedOutput": true,
-          "inputContentType": "application/json",
-          "outputContentType": "application/json; charset=utf-8",
-          "name": "Advanced",
-          "input": {
-            "name": "World"
-          },
-          "output": "Hello World!"
-        }
-      ],
+      "examples": [],
       "config": {},
       "headers": {},
       "pricingPlanConfig": {},
-      "src": "index.ts",
-      "path": "/index",
-      "createdAt": "2020-06-09T01:01:11.676Z",
-      "updatedAt": "2020-06-09T01:01:11.676Z",
-      "pathExpress": "/index",
+      "path": "/check_email",
+      "createdAt": "2020-06-30T21:12:40.330Z",
+      "updatedAt": "2020-06-30T21:12:40.330Z",
+      "pathExpress": "/check_email",
       "definition": {
-        "config": {
-          "defaultExport": true,
-          "language": "typescript"
-        },
         "params": {
-          "http": false,
-          "context": false,
-          "order": [
-            "name"
-          ],
           "schema": {
             "type": "object",
             "properties": {
-              "name": {
-                "type": "string",
-                "default": "World"
-              }
-            },
-            "additionalProperties": false,
-            "$schema": "http://json-schema.org/draft-07/schema#"
-          }
-        },
-        "returns": {
-          "async": false,
-          "http": false,
-          "schema": {
-            "type": "object",
-            "properties": {
-              "result": {
+              "x-saasify-proxy-secret": {
+                "name": "x-saasify-proxy-secret",
                 "type": "string"
               }
             },
-            "additionalProperties": false,
-            "$schema": "http://json-schema.org/draft-07/schema#"
+            "required": [
+              "x-saasify-proxy-secret"
+            ],
+            "title": "CheckEmailInput",
+            "description": "Input containing all parameters necessary for an email verification."
           }
-        },
-        "version": "1.1.0",
-        "title": "index"
+        }
       },
-      "url": "http://localhost:5100/dev/test-hello-world@7630b7e0/index",
-      "route": "/dev/test-hello-world@7630b7e0/index"
+      "url": "https://ssfy.sh/amaurymartiny/reacher@5353971a/check_email",
+      "route": "/amaurymartiny/reacher@5353971a/check_email"
     }
   ],
   "saas": {
     "headerName": null,
-    "logo": "https://storage.googleapis.com/saasify-uploads-prod/f218cc888f902eff57c42657c5a5a1cbaee2594c.svg",
+    "logo": "https://storage.googleapis.com/saasify-uploads-prod/696e287ad79f0e0352bc201b36d701849f7d55e7.svg",
     "logoLight": null,
-    "favicon": "https://storage.googleapis.com/saasify-uploads-prod/d7c93b5f48fe72915d5cea262bee510805324d9f.ico",
+    "favicon": "https://storage.googleapis.com/saasify-uploads-prod/ae7aba60db49352ef6d6782747f6c94dcf4c5029.png",
     "exampleImage": null,
-    "scripts": [],
+    "scripts": [
+      "https://storage.googleapis.com/saasify-uploads-prod/e3e26beb4eca4a0709e75ea22a7a05188582b3b8.js",
+      "https://storage.googleapis.com/saasify-uploads-prod/90513403649860aef14653e78e1e22a6324591c5.js"
+    ],
     "htmlPreBody": [],
     "htmlPostBody": [],
     "styles": [],
-    "features": [],
-    "name": "test-hello-world",
-    "heading": "test-hello-world",
-    "subheading": "Powered by Saasify",
+    "features": [
+      {
+        "name": "Yes, it scales",
+        "desc": "Our cutting-edge infrastructure uses serverless and elastic horizontal scaling technologies. Expect to verify **1M emails in under 10 minutes**.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/8d7bb70bf74f55d401c44cb2e0ce7f813003757b.svg"
+      },
+      {
+        "name": "Highest Accuracy Possible",
+        "desc": "We won't play small, this email verification tool actually connects to the mail server and checks in real-time if the email exists. We don't use historical data.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/24ef0772da2760de569dce1c5e8bc495e23551d5.svg"
+      },
+      {
+        "name": "Fully Featured",
+        "desc": "We check for MTA, MX records, SMTP, hard bounces, catch-all, disposable email, role-based accounts... and [much more](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d).",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/377b175b9d6cd568642424f37b50445ebe197659.svg"
+      },
+      {
+        "name": "Privacy Guaranteed",
+        "desc": "It's simple: once you get the result of your email verifications, we clear everything. We are 100% GDPR compliant.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/38e04e75af049826a74109dc26db3f6cb66087aa.svg"
+      },
+      {
+        "name": "Free for Personal Use",
+        "desc": "Start with **50 free** emails every month. Scale with our [pay-as-you-go](/pricing) plans afterwards.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/aee82d15ab2363a199e1b998fd70f9e837b506a3.svg"
+      },
+      {
+        "name": "State of the Art",
+        "desc": "We proxy verification requests via [Tor](https://www.torproject.org/) for privacy and to avoid being blacklisted.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/a8c8dcef62d3ed5a77c120bc390502a274a58aa5.svg"
+      },
+      {
+        "name": "Bulk Verification [coming soon]",
+        "desc": "Say goodbye to invalid email and hard bounces. Upload your dirty list and download a clean list.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/de73f4e8d08270555337be7f8f55fb01b597a225.svg"
+      },
+      {
+        "name": "Powerful API",
+        "desc": "Advanced integrations available programatically via our [REST API](/docs#section/API).",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/c3cc80bf290617979fe9c89cabd3d181c0d34cd1.svg"
+      },
+      {
+        "name": "Open Source",
+        "desc": "In order to guarantee transparency with your data, Reacher is 100% [open source](https://github.com/reacherhq)! We also offer the possibility to self-host the service yourself.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/b0a714829a4cac045d3cf13243e37f5b8435274d.svg"
+      }
+    ],
+    "name": "Reacher",
+    "heading": "**Real-Time Email Verification API**",
+    "subheading": "Email verification API that doesn't store your data. 100% open-source, built on Rust & Serverless.",
+    "repo": "https://github.com/reacherhq/webapp",
+    "sections": {
+      "hero": {
+        "cta": "50 emails/mo for free"
+      },
+      "navFooter": {
+        "email": "mailto:support@reacher.email",
+        "location": "Made in a small independent studio in Berlin 🇩🇪.",
+        "slack": false
+      },
+      "navHeader": {
+        "cta": "Sign up",
+        "support": "mailto:support@reacher.email"
+      }
+    },
     "theme": {
       "name": "waves",
+      "buttonStyle": "rounded",
+      "color": "#6C63FF",
+      "gradientDark": true,
+      "codeBlockDark": true,
       "backgroundImage": null
     }
   },
-  "createdAt": "2020-06-09T01:01:11.676Z",
-  "updatedAt": "2020-06-09T01:01:40.241Z",
-  "url": "http://localhost:5100/dev/test-hello-world@7630b7e0",
-  "openApiUrl": "http://localhost:5000/1/deployments/openapi/dev/test-hello-world@7630b7e0",
-  "saasUrl": "https://dev_test-hello-world_7630b7e0.saasify.sh",
+  "createdAt": "2020-06-30T21:12:40.330Z",
+  "updatedAt": "2020-06-30T21:12:40.330Z",
+  "url": "https://ssfy.sh/amaurymartiny/reacher@5353971a",
+  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@5353971a",
+  "saasUrl": "https://amaurymartiny_reacher_5353971a.saasify.sh",
+  "hasFreeTier": true,
   "authProviders": {
     "google": {
-      "enabled": false,
-      "provider": "google",
+      "enabled": true,
       "scopes": []
     },
     "github": {
       "enabled": true,
-      "provider": "github",
       "scopes": []
     },
     "spotify": {
@@ -224,9 +327,349 @@
     },
     "default": {
       "enabled": true,
-      "provider": "default",
       "scopes": []
     }
   },
-  "id": "dev/test-hello-world@7630b7e0"
+  "openapi": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Reacher",
+      "version": "0.2",
+      "description": "Reacher backend OpenAPIv3 specification.",
+      "license": {
+        "name": "AGPL-3.0",
+        "url": "https://github.com/reacherhq/backend/blob/master/LICENSE"
+      },
+      "contact": {
+        "name": "Reacher",
+        "url": "https://reacher.email",
+        "email": "amaury@reacher.email"
+      }
+    },
+    "paths": {
+      "/check_email": {
+        "post": {
+          "summary": "Email verification function",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CheckEmailOutput"
+                  },
+                  "examples": {
+                    "Example with test@gmail.com": {
+                      "value": {
+                        "input": "test@gmail.com",
+                        "is_reachable": "invalid",
+                        "misc": {
+                          "is_disposable": false,
+                          "is_role_account": true
+                        },
+                        "mx": {
+                          "accepts_mail": true,
+                          "records": [
+                            "alt4.gmail-smtp-in.l.google.com.",
+                            "alt2.gmail-smtp-in.l.google.com.",
+                            "alt3.gmail-smtp-in.l.google.com.",
+                            "gmail-smtp-in.l.google.com.",
+                            "alt1.gmail-smtp-in.l.google.com."
+                          ]
+                        },
+                        "smtp": {
+                          "can_connect_smtp": true,
+                          "has_full_inbox": false,
+                          "is_catch_all": false,
+                          "is_deliverable": false,
+                          "is_disabled": false
+                        },
+                        "syntax": {
+                          "domain": "gmail.com",
+                          "is_valid_syntax": true,
+                          "username": "test"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "operationId": "post-check-email",
+          "description": "Perform a full verification of an email address.",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckEmailInput"
+                }
+              }
+            },
+            "description": "Input containing all parameters necessary for an email verification."
+          },
+          "parameters": [
+            {
+              "schema": {
+                "type": "string"
+              },
+              "in": "header",
+              "name": "x-saasify-proxy-secret",
+              "description": "Secret key to only allow requests coming from Saasify.",
+              "required": true
+            }
+          ]
+        },
+        "parameters": []
+      }
+    },
+    "components": {
+      "schemas": {
+        "CheckEmailOutput": {
+          "title": "CheckEmailOutput",
+          "type": "object",
+          "x-examples": {
+            "Example with test@gmail.com": {
+              "input": "test@gmail.com",
+              "is_reachable": "invalid",
+              "misc": {
+                "is_disposable": false,
+                "is_role_account": true
+              },
+              "mx": {
+                "accepts_mail": true,
+                "records": [
+                  "alt4.gmail-smtp-in.l.google.com.",
+                  "alt2.gmail-smtp-in.l.google.com.",
+                  "alt3.gmail-smtp-in.l.google.com.",
+                  "gmail-smtp-in.l.google.com.",
+                  "alt1.gmail-smtp-in.l.google.com."
+                ]
+              },
+              "smtp": {
+                "can_connect_smtp": true,
+                "has_full_inbox": false,
+                "is_catch_all": false,
+                "is_deliverable": false,
+                "is_disabled": false
+              },
+              "syntax": {
+                "domain": "gmail.com",
+                "is_valid_syntax": true,
+                "username": "test"
+              }
+            }
+          },
+          "description": "The verification result of an email.",
+          "properties": {
+            "input": {
+              "type": "string",
+              "format": "email",
+              "description": "The input email address."
+            },
+            "is_reachable": {
+              "$ref": "#/components/schemas/Reachable"
+            },
+            "misc": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/MiscDetails"
+                },
+                {
+                  "$ref": "#/components/schemas/Error"
+                }
+              ],
+              "description": "Miscellaneous information about the email account."
+            },
+            "mx": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/MxDetails"
+                },
+                {
+                  "$ref": "#/components/schemas/Error"
+                }
+              ],
+              "description": "Information gathered from querying the MX records of the mail server."
+            },
+            "smtp": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/SmtpDetails"
+                },
+                {
+                  "$ref": "#/components/schemas/Error"
+                }
+              ],
+              "description": "Verifications performed by connecting to the mail server via SMTP."
+            },
+            "syntax": {
+              "$ref": "#/components/schemas/SyntaxDetails"
+            }
+          },
+          "required": [
+            "input",
+            "misc",
+            "mx",
+            "smtp",
+            "syntax",
+            "is_reachable"
+          ]
+        },
+        "Error": {
+          "title": "Error",
+          "type": "object",
+          "description": "Object describing an error happening during the misc, MX, or SMTP verifications.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "description": "An error type."
+            },
+            "message": {
+              "type": "string",
+              "description": "A human-readable description of the error."
+            }
+          },
+          "required": [
+            "type",
+            "message"
+          ]
+        },
+        "MiscDetails": {
+          "title": "MiscDetails",
+          "type": "object",
+          "description": "Miscellaneous information about the email account.",
+          "properties": {
+            "is_disposable": {
+              "type": "boolean",
+              "description": "Is the address provided by a known disposable email address provider?"
+            },
+            "is_role_account": {
+              "type": "boolean",
+              "description": "Is this email a role-based account?"
+            }
+          },
+          "required": [
+            "is_disposable",
+            "is_role_account"
+          ]
+        },
+        "MxDetails": {
+          "title": "MxDetails",
+          "type": "object",
+          "properties": {
+            "accepts_mail": {
+              "type": "boolean",
+              "description": "Does the server accept mails?"
+            },
+            "records": {
+              "type": "array",
+              "description": "The list of FQDN (Fully Qualified Domain Names) of the mail server.",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "accepts_mail",
+            "records"
+          ],
+          "description": "Object holding the MX details of the mail server."
+        },
+        "SmtpDetails": {
+          "title": "SmtpDetails",
+          "type": "object",
+          "description": "Verifications performed by connecting to the mail server via SMTP.",
+          "properties": {
+            "can_connect_smtp": {
+              "type": "boolean",
+              "description": "Can the mail exchanger of the email address domain be contacted successfully?"
+            },
+            "has_full_inbox": {
+              "type": "boolean",
+              "description": "Is the inbox of this mailbox full?"
+            },
+            "is_catch_all": {
+              "type": "boolean",
+              "description": "Is this email address a catch-all address?"
+            },
+            "is_deliverable": {
+              "type": "boolean",
+              "description": "Is an email sent to this address deliverable?"
+            },
+            "is_disabled": {
+              "type": "boolean",
+              "description": "Has this email address been disabled by the email provider?"
+            }
+          },
+          "required": [
+            "can_connect_smtp",
+            "has_full_inbox",
+            "is_catch_all",
+            "is_deliverable",
+            "is_disabled"
+          ]
+        },
+        "SyntaxDetails": {
+          "title": "SyntaxDetails",
+          "type": "object",
+          "description": "Syntax validation of an email address.",
+          "properties": {
+            "domain": {
+              "type": "string",
+              "description": "The domain name of the email, i.e. the part after the \"@\" symbol."
+            },
+            "is_valid_syntax": {
+              "type": "boolean",
+              "description": "Is the address syntactically valid?"
+            },
+            "username": {
+              "type": "string",
+              "description": "The username of the email, i.e. the part before the \"@\" symbol."
+            }
+          },
+          "required": [
+            "domain",
+            "is_valid_syntax",
+            "username"
+          ]
+        },
+        "Reachable": {
+          "type": "string",
+          "title": "Reachable",
+          "enum": [
+            "invalid",
+            "unknown",
+            "safe",
+            "risky"
+          ],
+          "description": "An enum to describe how confident we are that the recipient address is real: `safe`, `risky`, `invalid` and `unknown`. Check our FAQ to know the meanings of the 4 possibilities: https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb."
+        },
+        "CheckEmailInput": {
+          "title": "CheckEmailInput",
+          "type": "object",
+          "description": "Input containing all parameters necessary for an email verification.",
+          "properties": {
+            "from_email": {
+              "type": "string",
+              "description": "In the SMTP connection, the FROM email address."
+            },
+            "to_email": {
+              "type": "string",
+              "description": "The email address to check."
+            },
+            "hello_name": {
+              "type": "string",
+              "description": "In the SMTP connection, the EHLO hostname."
+            }
+          },
+          "required": [
+            "to_email"
+          ]
+        }
+      },
+      "securitySchemes": {}
+    }
+  },
+  "id": "amaurymartiny/reacher@5353971a"
 }

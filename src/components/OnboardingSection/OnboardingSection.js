@@ -16,7 +16,8 @@ import {
   Paper,
   Section,
   theme,
-  getUpgradeLink
+  getUpgradeLink,
+  LiveServiceDemo
 } from 'react-saasify'
 
 import styles from './styles.module.css'
@@ -144,21 +145,7 @@ export class OnboardingSection extends Component {
           >
             <Step
               title='Create Account'
-              description={
-                hasWebapp
-                  ? 'Test out the free plan.'
-                  : 'Test out the the public, rate-limited version of the API without an auth token.'
-              }
-            />
-
-            <Step
-              title='Upgrade Plan'
-              description={
-                <span>
-                  <Link to={getUpgradeLink({ auth, deployment })}>Upgrade</Link>{' '}
-                  your plan once you're ready.
-                </span>
-              }
+              description='Test out the free plan.'
             />
 
             <Step
@@ -183,7 +170,24 @@ export class OnboardingSection extends Component {
                       token. See the <Link to='/docs'>docs</Link> for more info.
                     </span>
                   ) : (
-                    <span>Use your private auth token.</span>
+                    <span>
+                      Use your private auth token below, and send a HTTP request
+                      to:
+                      <br />
+                      <code>{config.deployment.url}/check_email</code>
+                      <br />
+                      <br />
+                      with the following header:
+                      <br />
+                      <code>Authorization: &lt;AUTH_TOKEN&gt;</code>.
+                      <br />
+                      <br />
+                      For more details, check out the{' '}
+                      <Link to='/docs#operation/post-check-email'>
+                        documentation
+                      </Link>
+                      .
+                    </span>
                   )}
 
                   {auth.consumer && auth.consumer.enabled && (
@@ -217,11 +221,29 @@ export class OnboardingSection extends Component {
                             : `${auth.consumer.token.substr(0, 8)} ...`}
                         </Button>
                       </Tooltip>
+
+                      <LiveServiceDemo
+                        auth={auth}
+                        deployment={deployment}
+                        project={deployment.project}
+                        service={deployment.services[0]}
+                      />
+                      <br />
                     </>
                   )}
                 </span>
               }
               icon={step === 2 ? <Icon type='loading' /> : undefined}
+            />
+
+            <Step
+              title='Upgrade Plan'
+              description={
+                <span>
+                  <Link to={getUpgradeLink({ auth, deployment })}>Upgrade</Link>{' '}
+                  your plan once you're ready to verify more emails.
+                </span>
+              }
             />
           </Steps>
         </Paper>

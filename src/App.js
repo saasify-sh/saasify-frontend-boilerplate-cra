@@ -62,8 +62,8 @@ const saasifyConfig = {
           to: '/docs'
         },
       {
-        label: 'Support',
-        href: 'mailto:support@saasify.sh'
+        label: 'Contact Us',
+        href: 'mailto:support@reacher.email'
       }
     ],
     actions: ({ auth }) => {
@@ -153,11 +153,15 @@ const saasifyConfig = {
         ]
       },
       {
-        label: 'Support',
+        label: 'Contact Us',
         links: [
           {
             label: 'Email',
-            href: 'mailto:support@saasify.sh'
+            href: 'mailto:support@reacher.email'
+          },
+          {
+            label: 'Github',
+            href: 'https://github.com/reacherhq/webapp'
           }
         ]
       }

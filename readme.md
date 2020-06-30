@@ -94,7 +94,7 @@ Some common changes you may want to consider:
 - Remove the `Docs` page. This page is useful for API-first SaaS products, but if your product doesn't expose a public API, then we recommend removing it.
   - You'll also want to remove the links to `/docs` in the `App.js` config.
   - You can also remove these dependencies: `@saasify/redoc` and `swagger-ui-react`.
-- Customize your support email via find & replace `support@saasify.sh`.
+- Customize your support email via find & replace `support@reacher.email`.
 - Customize the various CTAs from "Get Started" to a CTA more in line with your product's onboarding.
 - By default, we include all third-party auth pages for Google, GitHub, Twitter, etc. Feel free to remove all of the auth pages you won't be using.
 - It is very common to want to change the logged in user experience.

@@ -19,7 +19,7 @@ function intervalToLabel(intervalS) {
   }
 }
 
-function formatPrice(price, opts = {}) {
+export function formatPrice(price, opts = {}) {
   const { verbose = true } = opts
 
   const p = price / 100
@@ -76,6 +76,7 @@ function formatPricingPlan(plan) {
 
   return {
     ...plan,
+    original: plan,
     type: isFree ? 'secondary' : 'primary',
     desc: plan.desc || defaultDesc,
     interval: 'mo',

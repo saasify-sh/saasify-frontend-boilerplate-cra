@@ -7,7 +7,7 @@ import { observer, inject } from 'mobx-react'
 import { API, notification, theme } from 'react-saasify'
 import { withTracker } from 'lib/with-tracker'
 
-import { PricingPlan, CheckoutForm, Paper, NavHeader } from 'components'
+import { CheckoutForm, Paper, PayAsYouGo, NavHeader } from 'components'
 
 import deployment from 'lib/deployment'
 import plans from 'lib/pricing-plans'
@@ -58,7 +58,7 @@ export class CheckoutPage extends Component {
         <NavHeader fixed />
 
         <div className={theme(styles, 'content')}>
-          <PricingPlan plan={plan} inline />
+          <PayAsYouGo />
 
           <Paper className={theme(styles, 'checkout-form')}>
             <CheckoutForm
