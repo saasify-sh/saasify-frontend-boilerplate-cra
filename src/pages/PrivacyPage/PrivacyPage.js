@@ -26,13 +26,13 @@ export class PrivacyPage extends Component {
             </strong>
           </p>
           <p>
-            At Saasify Inc. (<strong>“Company”</strong> or
+            At Reacher (<strong>“Company”</strong> or
             <strong>&nbsp;“We”</strong>), We respect your privacy and are
             committed to protecting it through our compliance with this policy.
           </p>
           <p>
             This policy describes the types of information we may collect from
-            you or that you may provide when you visit the website saasify.sh
+            you or that you may provide when you visit the website reacher.email
             (our “<strong>Website</strong>”) and our practices for collecting,
             using, maintaining, protecting, and disclosing that information.
           </p>
@@ -334,9 +334,9 @@ export class PrivacyPage extends Component {
             <li>
               To a buyer or other successor in the event of a merger,
               divestiture, restructuring, reorganization, dissolution, or other
-              sale or transfer of some or all of Saasify’s assets, whether as a
+              sale or transfer of some or all of Reacher assets, whether as a
               going concern or as part of bankruptcy, liquidation, or similar
-              proceeding, in which personal information held by Saasify about
+              proceeding, in which personal information held by Reacher about
               our Website users is among the assets transferred.
             </li>
             <li>
@@ -361,7 +361,7 @@ export class PrivacyPage extends Component {
             </li>
             <li>
               If we believe disclosure is necessary or appropriate to protect
-              the rights, property, or safety of Saasify, our customers, or
+              the rights, property, or safety of Reacher, our customers, or
               others. This includes exchanging information with other companies
               and organizations for the purposes of fraud protection and credit
               risk reduction.
