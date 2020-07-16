@@ -4,6 +4,7 @@
   "description": "Powered by Saasify",
   "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [FAQ](https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
   "keywords": [],
+  "proxyMode": "active",
   "hash": "5353971a",
   "user": "5ea9834bc5a438003c319d1e",
   "project": {
@@ -37,16 +38,14 @@
       }
     ],
     "createdAt": "2020-04-30T19:26:19.316Z",
-    "updatedAt": "2020-06-30T21:12:40.480Z",
+    "updatedAt": "2020-07-16T17:34:56.080Z",
     "lastDeployment": "amaurymartiny/reacher@5353971a",
-    "alias": "reacher.email",
     "lastPublishedDeployment": "amaurymartiny/reacher@91a0a1cf",
     "lastPublishedVersion": "0.1.4",
     "stripeBaseProduct": "prod_HGYDgL6YePm4Rq",
     "stripeRequestProduct": "prod_HGYD0bZ1NHWh6F",
     "stripeMetricProducts": {},
     "saasUrl": "https://amaurymartiny_reacher.saasify.sh",
-    "aliasUrl": "https://reacher.email",
     "stripeConnectParams": [
       {
         "stripe_account": "acct_1GdjpUA852XqldwX"
@@ -183,8 +182,8 @@
       "headers": {},
       "pricingPlanConfig": {},
       "path": "/check_email",
-      "createdAt": "2020-06-30T21:12:40.330Z",
-      "updatedAt": "2020-06-30T21:12:40.330Z",
+      "createdAt": "2020-07-16T17:34:55.901Z",
+      "updatedAt": "2020-07-16T17:34:55.901Z",
       "pathExpress": "/check_email",
       "definition": {
         "params": {
@@ -196,9 +195,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "x-saasify-proxy-secret"
-            ],
+            "required": ["x-saasify-proxy-secret"],
             "title": "CheckEmailInput",
             "description": "Input containing all parameters necessary for an email verification."
           }
@@ -224,7 +221,7 @@
     "features": [
       {
         "name": "Yes, it scales",
-        "desc": "Our cutting-edge infrastructure uses serverless and elastic horizontal scaling technologies. Expect to verify **1M emails in under 10 minutes**.",
+        "desc": "Our cutting-edge infrastructure leverages Serverless and Rust technologies. This means Reacher verifies **1M emails in under 10 minutes**.",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/8d7bb70bf74f55d401c44cb2e0ce7f813003757b.svg"
       },
       {
@@ -270,8 +267,8 @@
     ],
     "name": "Reacher",
     "heading": "**Real-Time Email Verification API**",
-    "subheading": "Email verification API that doesn't store your data. 100% open-source, built on Rust & Serverless.",
-    "repo": "https://github.com/reacherhq/webapp",
+    "subheading": "Prevent bounced emails with professional grade email verification. Free for personal use.",
+    "repo": "https://github.com/reacherhq",
     "sections": {
       "hero": {
         "cta": "50 emails/mo for free"
@@ -295,8 +292,8 @@
       "backgroundImage": null
     }
   },
-  "createdAt": "2020-06-30T21:12:40.330Z",
-  "updatedAt": "2020-06-30T21:12:40.330Z",
+  "createdAt": "2020-07-16T17:34:55.901Z",
+  "updatedAt": "2020-07-16T17:34:55.901Z",
   "url": "https://ssfy.sh/amaurymartiny/reacher@5353971a",
   "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@5353971a",
   "saasUrl": "https://amaurymartiny_reacher_5353971a.saasify.sh",
@@ -507,14 +504,7 @@
               "$ref": "#/components/schemas/SyntaxDetails"
             }
           },
-          "required": [
-            "input",
-            "misc",
-            "mx",
-            "smtp",
-            "syntax",
-            "is_reachable"
-          ]
+          "required": ["input", "misc", "mx", "smtp", "syntax", "is_reachable"]
         },
         "Error": {
           "title": "Error",
@@ -530,10 +520,7 @@
               "description": "A human-readable description of the error."
             }
           },
-          "required": [
-            "type",
-            "message"
-          ]
+          "required": ["type", "message"]
         },
         "MiscDetails": {
           "title": "MiscDetails",
@@ -549,10 +536,7 @@
               "description": "Is this email a role-based account?"
             }
           },
-          "required": [
-            "is_disposable",
-            "is_role_account"
-          ]
+          "required": ["is_disposable", "is_role_account"]
         },
         "MxDetails": {
           "title": "MxDetails",
@@ -570,10 +554,7 @@
               }
             }
           },
-          "required": [
-            "accepts_mail",
-            "records"
-          ],
+          "required": ["accepts_mail", "records"],
           "description": "Object holding the MX details of the mail server."
         },
         "SmtpDetails": {
@@ -628,21 +609,12 @@
               "description": "The username of the email, i.e. the part before the \"@\" symbol."
             }
           },
-          "required": [
-            "domain",
-            "is_valid_syntax",
-            "username"
-          ]
+          "required": ["domain", "is_valid_syntax", "username"]
         },
         "Reachable": {
           "type": "string",
           "title": "Reachable",
-          "enum": [
-            "invalid",
-            "unknown",
-            "safe",
-            "risky"
-          ],
+          "enum": ["invalid", "unknown", "safe", "risky"],
           "description": "An enum to describe how confident we are that the recipient address is real: `safe`, `risky`, `invalid` and `unknown`. Check our FAQ to know the meanings of the 4 possibilities: https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb."
         },
         "CheckEmailInput": {
@@ -663,9 +635,7 @@
               "description": "In the SMTP connection, the EHLO hostname."
             }
           },
-          "required": [
-            "to_email"
-          ]
+          "required": ["to_email"]
         }
       },
       "securitySchemes": {}
