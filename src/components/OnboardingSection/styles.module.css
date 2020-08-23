@@ -23,3 +23,15 @@
 .body :global(.ant-result-icon) {
   display: none;
 }
+
+.apiTokenWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.code {
+  background-color: lightgray;
+  border-radius: 1em;
+  padding: 1em;
+  text-align: center;
+}

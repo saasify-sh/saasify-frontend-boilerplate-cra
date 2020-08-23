@@ -34,7 +34,6 @@ export class OnboardingSection extends Component {
   }
 
   state = {
-    isTokenVisible: false,
     copiedTextToClipboard: false
   }
 
@@ -47,7 +46,7 @@ export class OnboardingSection extends Component {
 
   render() {
     const { auth, config, className, ...rest } = this.props
-    const { isTokenVisible, copiedTextToClipboard } = this.state
+    const { copiedTextToClipboard } = this.state
 
     const { saas } = config.deployment
     const hasWebapp = !!saas?.webapp?.url
@@ -173,14 +172,36 @@ export class OnboardingSection extends Component {
                     <span>
                       Use your private auth token below, and send a HTTP request
                       to:
-                      <br />
-                      <code>{config.deployment.url}/check_email</code>
-                      <br />
-                      <br />
+                      <pre className={styles.code}>
+                        {config.deployment.url}/check_email
+                      </pre>
                       with the following header:
+                      <pre className={styles.code}>
+                        Authorization: &lt;AUTH_TOKEN&gt;
+                      </pre>
+                      Below is your unique <code>AUTH_TOKEN</code>. Don't share
+                      it with anyone else!
                       <br />
-                      <code>Authorization: &lt;AUTH_TOKEN&gt;</code>.
                       <br />
+                      {auth.consumer && auth.consumer.enabled && (
+                        <div className={styles.apiTokenWrapper}>
+                          <Tooltip
+                            placement='top'
+                            title={
+                              copiedTextToClipboard
+                                ? 'Copied!'
+                                : 'Copy auth token to clipboard'
+                            }
+                          >
+                            <Button
+                              className={styles.apiToken}
+                              onClick={this._onClickCopyToken}
+                            >
+                              {auth.consumer.token}
+                            </Button>
+                          </Tooltip>
+                        </div>
+                      )}
                       <br />
                       For more details, check out the{' '}
                       <Link to='/docs#operation/post-check-email'>
@@ -190,47 +211,13 @@ export class OnboardingSection extends Component {
                     </span>
                   )}
 
-                  {auth.consumer && auth.consumer.enabled && (
-                    <>
-                      <br />
-
-                      <Tooltip
-                        placement='top'
-                        title={
-                          isTokenVisible ? 'Hide auth token' : 'Show auth token'
-                        }
-                      >
-                        <Button
-                          icon={isTokenVisible ? 'eye' : 'eye-invisible'}
-                          className={theme(styles, 'tokenButton')}
-                          onClick={this._onClickTokenVisibility}
-                        />
-                      </Tooltip>
-
-                      <Tooltip
-                        placement='top'
-                        title={
-                          copiedTextToClipboard
-                            ? 'Copied!'
-                            : 'Copy auth token to clipboard'
-                        }
-                      >
-                        <Button onClick={this._onClickCopyToken}>
-                          {isTokenVisible
-                            ? auth.consumer.token
-                            : `${auth.consumer.token.substr(0, 8)} ...`}
-                        </Button>
-                      </Tooltip>
-
-                      <LiveServiceDemo
-                        auth={auth}
-                        deployment={deployment}
-                        project={deployment.project}
-                        service={deployment.services[0]}
-                      />
-                      <br />
-                    </>
-                  )}
+                  <LiveServiceDemo
+                    auth={auth}
+                    deployment={deployment}
+                    project={deployment.project}
+                    service={deployment.services[0]}
+                  />
+                  <br />
                 </span>
               }
               icon={step === 2 ? <Icon type='loading' /> : undefined}
@@ -249,10 +236,6 @@ export class OnboardingSection extends Component {
         </Paper>
       </Section>
     )
-  }
-
-  _onClickTokenVisibility = () => {
-    this.setState({ isTokenVisible: !this.state.isTokenVisible })
   }
 
   _onClickCopyToken = () => {
