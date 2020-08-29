@@ -149,6 +149,10 @@ const saasifyConfig = {
           {
             label: 'Privacy',
             to: '/privacy'
+          },
+          {
+            label: 'Commercial License',
+            to: '/commercial-license'
           }
         ]
       },
@@ -226,6 +230,15 @@ export default class App extends Component {
               <Route exact path='/' component={HomePage} />
 
               <Route path='/pricing' component={PricingPage} />
+
+              <Route
+                path='/commercial-license'
+                component={() => {
+                  window.location.href =
+                    'https://www.notion.so/reacherhq/Commercial-Licenses-for-OEMs-ISVs-and-VARs-52462945b3b0428d8b312188e2e6c4fd'
+                  return null
+                }}
+              />
 
               <Route path='/docs' component={DocsPage} />
 

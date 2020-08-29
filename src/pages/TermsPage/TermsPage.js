@@ -25,15 +25,15 @@ export class TermsPage extends Component {
             <u>Acceptance of the Terms of Use</u>
           </h3>
           <p>
-            These terms of use are entered into by and between You and Reacher
-            Inc. (“<strong>Company</strong>,” “<strong>we</strong>,” “
+            These terms of use are entered into by and between You and PROXIMA B
+            SASU (“<strong>Company</strong>,” “<strong>we</strong>,” “
             <strong>us</strong>,” or “<strong>Reacher</strong>”). The following
             terms and conditions, together with any documents they expressly
             incorporate by reference (collectively, these “
             <strong>Terms of Use</strong>”), govern your access to and use of
             this site, including any content, functionality and services offered
-            on or through reacher.email (the “<strong>Website</strong>”),
-            whether as a guest or a registered user.
+            on or through https://reacher.email (the “<strong>Website</strong>
+            ”), whether as a guest or a registered user.
           </p>
           <p>
             Please read the Terms of Use carefully before you start to use the
@@ -185,7 +185,7 @@ export class TermsPage extends Component {
           <p>
             If you are a subscribing organization, you must comply with these
             Terms, the Privacy Policy and any other agreements between you and
-            Reacher that govern your subscription, including pricing terms.
+            COMPANY that govern your subscription, including pricing terms.
           </p>
           <p>
             If you wish to make any use of material on the Website other than
@@ -208,7 +208,7 @@ export class TermsPage extends Component {
             <u>Trademarks</u>
           </h3>
           <p>
-            The Company name, the terms Reacher, the Company logo, tagline and
+            The Company name, the terms "Reacher", the Company logo, tagline and
             all related names, logos, product and service names, designs and
             slogans are trademarks of the Company or its affiliates or
             licensors. You must not use such marks without the prior written
@@ -524,10 +524,12 @@ export class TermsPage extends Component {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             DMCA Notice
           </p>
-          <p>Company:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reacher</p>
           <p>
-            Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 110
-            Livingston Street, #3J, Brooklyn, NY 11201
+            Company:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROXIMA B SASU
+          </p>
+          <p>
+            Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15
+            Avenue Sainte Foy, 92200 Neuilly-sur-Seine, FRANCE
           </p>
           <p>
             Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -852,7 +854,7 @@ export class TermsPage extends Component {
           </h3>
           <p>
             The Terms of Use, Terms of Sale and our Privacy Policy constitute
-            the sole and entire agreement between you and Reacher with respect
+            the sole and entire agreement between you and Company with respect
             to the Website and supersede all prior and contemporaneous
             understandings, agreements, representations and warranties, both
             written and oral, with respect to the Website.
@@ -860,7 +862,7 @@ export class TermsPage extends Component {
           <h3>
             <u>Your Comments and Concerns</u>
           </h3>
-          <p>This website is operated by Reacher</p>
+          <p>This website is operated by PROXIMA B SASU.</p>
           <p>
             All notices of copyright infringement claims should be sent to the
             copyright agent designated in our Copyright Policy above, in the
