@@ -51,6 +51,15 @@ export class OnboardingSection extends Component {
     const { saas } = config.deployment
     const hasWebapp = !!saas?.webapp?.url
 
+    // Show
+    // https://ssfy.sh/amaurymartiny/reacher@0.1.5/check_email
+    // instead of
+    // https://ssfy.sh/amaurymartiny/reacher@eb5494d3/check_email
+    const backendUrl = config?.deployment?.url?.replace(
+      config?.deployment?.hash,
+      config?.deployment?.version
+    )
+
     let step = 0
 
     if (auth.isAuthenticated) {
@@ -173,7 +182,7 @@ export class OnboardingSection extends Component {
                       Use your private auth token below, and send a HTTP request
                       to:
                       <pre className={styles.code}>
-                        {config.deployment.url}/check_email
+                        {backendUrl}/check_email
                       </pre>
                       with the following header:
                       <pre className={styles.code}>
