@@ -179,7 +179,6 @@ export default class App extends Component {
     const { saas } = deployment
 
     const fonts = toJS(ThemeManager.theme.fonts)
-    const desc = removeMd(saas.subheading || saas.heading)
     const themeClassName = `theme-${ThemeManager.theme['@name']}`
     const themeRootClassName = ThemeManager.theme.rootClassName
 
@@ -193,7 +192,10 @@ export default class App extends Component {
 
           {saas.favicon && <link rel='shortcut icon' href={saas.favicon} />}
 
-          {desc && <meta name='description' content={desc} />}
+          <meta
+            name='description'
+            content='Reacher is a powerful, free and open-source email verification API service to reduce your bounce rate and avoid spam sign-ups. We check SMTP responses, syntax validation, catch-all addresses and disposable providers.'
+          />
 
           {saas.scripts &&
             saas.scripts.map((src) => (
