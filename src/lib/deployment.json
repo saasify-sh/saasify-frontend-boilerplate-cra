@@ -5,7 +5,7 @@
   "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [FAQ](https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
   "keywords": [],
   "proxyMode": "active",
-  "hash": "8a479152",
+  "hash": "2d2ce35c",
   "user": "5ea9834bc5a438003c319d1e",
   "project": {
     "keywords": [],
@@ -42,8 +42,8 @@
       }
     ],
     "createdAt": "2020-04-30T19:26:19.316Z",
-    "updatedAt": "2020-11-02T20:03:49.650Z",
-    "lastDeployment": "amaurymartiny/reacher@8a479152",
+    "updatedAt": "2020-11-02T20:31:17.274Z",
+    "lastDeployment": "amaurymartiny/reacher@2d2ce35c",
     "lastPublishedDeployment": "amaurymartiny/reacher@eb5494d3",
     "lastPublishedVersion": "0.1.5",
     "stripeBaseProduct": "prod_HGYDgL6YePm4Rq",
@@ -186,8 +186,8 @@
       "headers": {},
       "pricingPlanConfig": {},
       "path": "/check_email",
-      "createdAt": "2020-11-02T20:03:49.491Z",
-      "updatedAt": "2020-11-02T20:03:49.491Z",
+      "createdAt": "2020-11-02T20:31:17.127Z",
+      "updatedAt": "2020-11-02T20:31:17.127Z",
       "pathExpress": "/check_email",
       "definition": {
         "params": {
@@ -207,8 +207,8 @@
           }
         }
       },
-      "url": "https://ssfy.sh/amaurymartiny/reacher@8a479152/check_email",
-      "route": "/amaurymartiny/reacher@8a479152/check_email"
+      "url": "https://ssfy.sh/amaurymartiny/reacher@2d2ce35c/check_email",
+      "route": "/amaurymartiny/reacher@2d2ce35c/check_email"
     }
   ],
   "saas": {
@@ -227,12 +227,17 @@
     "features": [
       {
         "name": "Yes, it scales",
-        "desc": "Our cutting-edge infrastructure leverages horizontal scaling technology, and is built with the Rust programming language.",
+        "desc": "Our cutting-edge infrastructure leverages elastic horizontal scaling technology. **Prevent spam sign-ups** on your website, or **clean large lists**, both with Reacher.",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/8d7bb70bf74f55d401c44cb2e0ce7f813003757b.svg"
       },
       {
+        "name": "Warp Speeds",
+        "desc": "Reacher is built with the fast and performant [Rust](https://www.rust-lang.org/) programming language, using the [Warp](https://github.com/seanmonstar/warp) web framework. For real-time email verification, **it's fast**.",
+        "icon": "https://storage.googleapis.com/saasify-uploads-prod/a8c8dcef62d3ed5a77c120bc390502a274a58aa5.svg"
+      },
+      {
         "name": "Highest Accuracy Possible",
-        "desc": "We won't play small, this email verification tool actually connects to the mail server and checks in real-time if the email exists. We don't use historical data.",
+        "desc": "We won't play small, this email verification tool actually connects to the mail server and checks in **real-time** if the email exists. We don't use historical data.",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/24ef0772da2760de569dce1c5e8bc495e23551d5.svg"
       },
       {
@@ -242,7 +247,7 @@
       },
       {
         "name": "Privacy Guaranteed",
-        "desc": "It's simple: once you get the result of your email verifications, we clear everything. We are 100% GDPR compliant.",
+        "desc": "It's simple: once you get the result of your email verifications, we delete everything on our side. We are 100% GDPR compliant.",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/38e04e75af049826a74109dc26db3f6cb66087aa.svg"
       },
       {
@@ -251,13 +256,8 @@
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/aee82d15ab2363a199e1b998fd70f9e837b506a3.svg"
       },
       {
-        "name": "State of the Art",
-        "desc": "We proxy verification requests via [Tor](https://www.torproject.org/) for privacy and to avoid being blacklisted.",
-        "icon": "https://storage.googleapis.com/saasify-uploads-prod/a8c8dcef62d3ed5a77c120bc390502a274a58aa5.svg"
-      },
-      {
-        "name": "Bulk Verification [coming soon]",
-        "desc": "Say goodbye to invalid email and hard bounces. Upload your dirty list and download a clean list.",
+        "name": "Bulk Verification",
+        "desc": "Clean your large email lists by using our [JavaScript SDK](https://github.com/reacherhq/reacher-js) to perform bulk email verification.",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/de73f4e8d08270555337be7f8f55fb01b597a225.svg"
       },
       {
@@ -266,14 +266,14 @@
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/c3cc80bf290617979fe9c89cabd3d181c0d34cd1.svg"
       },
       {
-        "name": "Open Source",
-        "desc": "In order to guarantee transparency with your data, Reacher is 100% [open source](https://github.com/reacherhq)! We also offer the possibility to self-host the service yourself.",
+        "name": "Open-Source",
+        "desc": "In order to guarantee transparency with your data, Reacher is 100% [open-source](https://github.com/reacherhq/backend)! We also offer the possibility to self-host the service yourself.",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/b0a714829a4cac045d3cf13243e37f5b8435274d.svg"
       }
     ],
     "name": "Reacher",
-    "heading": "*Open-Source Email Verification API**",
-    "subheading": "Prevent bounced emails with real-time email verification. Free for personal use.",
+    "heading": "**Open-Source Email Verification API**",
+    "subheading": "Prevent bounced emails with world-class email verification. Free for personal use.",
     "repo": "https://github.com/reacherhq",
     "sections": {
       "hero": {
@@ -298,11 +298,11 @@
       "backgroundImage": null
     }
   },
-  "createdAt": "2020-11-02T20:03:49.491Z",
-  "updatedAt": "2020-11-02T20:03:49.491Z",
-  "url": "https://ssfy.sh/amaurymartiny/reacher@8a479152",
-  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@8a479152",
-  "saasUrl": "https://amaurymartiny_reacher_8a479152.saasify.sh",
+  "createdAt": "2020-11-02T20:31:17.127Z",
+  "updatedAt": "2020-11-02T20:31:17.127Z",
+  "url": "https://ssfy.sh/amaurymartiny/reacher@2d2ce35c",
+  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@2d2ce35c",
+  "saasUrl": "https://amaurymartiny_reacher_2d2ce35c.saasify.sh",
   "hasFreeTier": true,
   "authProviders": {
     "google": {
@@ -674,5 +674,5 @@
       "securitySchemes": {}
     }
   },
-  "id": "amaurymartiny/reacher@8a479152"
+  "id": "amaurymartiny/reacher@2d2ce35c"
 }

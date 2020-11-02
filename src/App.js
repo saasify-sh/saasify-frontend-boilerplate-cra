@@ -165,7 +165,7 @@ const saasifyConfig = {
           },
           {
             label: 'Github',
-            href: 'https://github.com/reacherhq/webapp'
+            href: 'https://github.com/reacherhq/backend'
           }
         ]
       }
