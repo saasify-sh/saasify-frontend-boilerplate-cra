@@ -1,11 +1,11 @@
 {
   "enabled": true,
-  "published": true,
+  "published": false,
   "description": "Powered by Saasify",
   "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [FAQ](https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
   "keywords": [],
   "proxyMode": "active",
-  "hash": "eb5494d3",
+  "hash": "8a479152",
   "user": "5ea9834bc5a438003c319d1e",
   "project": {
     "keywords": [],
@@ -42,8 +42,8 @@
       }
     ],
     "createdAt": "2020-04-30T19:26:19.316Z",
-    "updatedAt": "2020-08-23T11:35:45.808Z",
-    "lastDeployment": "amaurymartiny/reacher@eb5494d3",
+    "updatedAt": "2020-11-02T20:03:49.650Z",
+    "lastDeployment": "amaurymartiny/reacher@8a479152",
     "lastPublishedDeployment": "amaurymartiny/reacher@eb5494d3",
     "lastPublishedVersion": "0.1.5",
     "stripeBaseProduct": "prod_HGYDgL6YePm4Rq",
@@ -57,7 +57,7 @@
     ],
     "id": "amaurymartiny/reacher"
   },
-  "version": "0.1.5",
+  "version": "0.1.6",
   "pricingPlans": [
     {
       "features": [
@@ -112,51 +112,51 @@
         "tiers": [
           {
             "upTo": "999",
-            "unitAmount": 0.467
+            "unitAmount": 1.4
           },
           {
             "upTo": "2499",
-            "unitAmount": 0.387
+            "unitAmount": 1.16
           },
           {
             "upTo": "4999",
-            "unitAmount": 0.327
+            "unitAmount": 0.98
           },
           {
             "upTo": "9999",
-            "unitAmount": 0.23
+            "unitAmount": 0.69
           },
           {
             "upTo": "24999",
-            "unitAmount": 0.198
+            "unitAmount": 0.593
           },
           {
             "upTo": "49999",
-            "unitAmount": 0.133
+            "unitAmount": 0.398
           },
           {
             "upTo": "99999",
-            "unitAmount": 0.1
+            "unitAmount": 0.299
           },
           {
             "upTo": "249999",
-            "unitAmount": 0.067
+            "unitAmount": 0.2
           },
           {
             "upTo": "499999",
-            "unitAmount": 0.053
+            "unitAmount": 0.16
           },
           {
             "upTo": "999999",
-            "unitAmount": 0.042
+            "unitAmount": 0.125
           },
           {
             "upTo": "2499999",
-            "unitAmount": 0.033
+            "unitAmount": 0.1
           },
           {
             "upTo": "inf",
-            "unitAmount": 0.025
+            "unitAmount": 0.075
           }
         ],
         "label": "requests",
@@ -168,9 +168,9 @@
       "_stripeMetricPlansTest": {},
       "_stripeMetricPlansLive": {},
       "name": "Pay-As-You-Go",
-      "slug": "pay-as-you-go-v1",
-      "baseId": "base:40adb9cf2a92ba804fda1ba128d95db1bd16f872eb58eacc358ac7921dea290c:acct_1GdjpUA852XqldwX",
-      "requestsId": "requests:68fad0e319d86af0dfb0df3673a4526db59c78350b1d22c96bbf1a9ed0c7e483:acct_1GdjpUA852XqldwX"
+      "slug": "pay-as-you-go-v2",
+      "baseId": "base:ea3c1adab87839930b945521218b44ea8b566b5e3aafef0ff95393f4c3d3aabe:acct_1GdjpUA852XqldwX",
+      "requestsId": "requests:a9f8d962538bbbfba2e990479eac3457768b30923e7e1e86cd2ed892d0add29d:acct_1GdjpUA852XqldwX"
     }
   ],
   "coupons": [],
@@ -186,8 +186,8 @@
       "headers": {},
       "pricingPlanConfig": {},
       "path": "/check_email",
-      "createdAt": "2020-08-23T11:27:40.950Z",
-      "updatedAt": "2020-08-23T11:27:40.950Z",
+      "createdAt": "2020-11-02T20:03:49.491Z",
+      "updatedAt": "2020-11-02T20:03:49.491Z",
       "pathExpress": "/check_email",
       "definition": {
         "params": {
@@ -207,8 +207,8 @@
           }
         }
       },
-      "url": "https://ssfy.sh/amaurymartiny/reacher@eb5494d3/check_email",
-      "route": "/amaurymartiny/reacher@eb5494d3/check_email"
+      "url": "https://ssfy.sh/amaurymartiny/reacher@8a479152/check_email",
+      "route": "/amaurymartiny/reacher@8a479152/check_email"
     }
   ],
   "saas": {
@@ -227,7 +227,7 @@
     "features": [
       {
         "name": "Yes, it scales",
-        "desc": "Our cutting-edge infrastructure leverages Serverless and Rust technologies. This means Reacher verifies **1M emails in under 10 minutes**.",
+        "desc": "Our cutting-edge infrastructure leverages horizontal scaling technology, and is built with the Rust programming language.",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/8d7bb70bf74f55d401c44cb2e0ce7f813003757b.svg"
       },
       {
@@ -272,8 +272,8 @@
       }
     ],
     "name": "Reacher",
-    "heading": "**Real-Time Email Verification API**",
-    "subheading": "Prevent bounced emails with professional grade email verification. Free for personal use.",
+    "heading": "*Open-Source Email Verification API**",
+    "subheading": "Prevent bounced emails with real-time email verification. Free for personal use.",
     "repo": "https://github.com/reacherhq",
     "sections": {
       "hero": {
@@ -298,11 +298,11 @@
       "backgroundImage": null
     }
   },
-  "createdAt": "2020-08-23T11:27:40.950Z",
-  "updatedAt": "2020-08-23T11:35:45.694Z",
-  "url": "https://ssfy.sh/amaurymartiny/reacher@eb5494d3",
-  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@eb5494d3",
-  "saasUrl": "https://amaurymartiny_reacher_eb5494d3.saasify.sh",
+  "createdAt": "2020-11-02T20:03:49.491Z",
+  "updatedAt": "2020-11-02T20:03:49.491Z",
+  "url": "https://ssfy.sh/amaurymartiny/reacher@8a479152",
+  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@8a479152",
+  "saasUrl": "https://amaurymartiny_reacher_8a479152.saasify.sh",
   "hasFreeTier": true,
   "authProviders": {
     "google": {
@@ -674,5 +674,5 @@
       "securitySchemes": {}
     }
   },
-  "id": "amaurymartiny/reacher@eb5494d3"
+  "id": "amaurymartiny/reacher@8a479152"
 }
