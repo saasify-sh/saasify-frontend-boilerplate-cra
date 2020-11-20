@@ -7,8 +7,7 @@ import {
   NavFooter,
   ScrollToTopOnMount,
   PricingSection,
-  EnterpriseSection,
-  CTASection
+  EnterpriseSection
 } from 'components'
 
 import styles from './styles.module.css'
@@ -29,8 +28,6 @@ export class PricingPage extends Component {
         </div>
 
         <EnterpriseSection />
-
-        <CTASection />
 
         <NavFooter />
       </div>

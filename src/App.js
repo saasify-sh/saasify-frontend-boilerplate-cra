@@ -120,6 +120,10 @@ const saasifyConfig = {
               label: 'Docs',
               to: '/docs'
             },
+          {
+            label: 'Self-Host Reacher',
+            to: '/self-host'
+          },
           ({ auth }) =>
             auth.isAuthenticated
               ? {
@@ -149,10 +153,6 @@ const saasifyConfig = {
           {
             label: 'Privacy',
             to: '/privacy'
-          },
-          {
-            label: 'Commercial License',
-            to: '/commercial-license'
           }
         ]
       },
@@ -166,6 +166,11 @@ const saasifyConfig = {
           {
             label: 'Github',
             href: 'https://github.com/reacherhq/backend'
+          },
+          {
+            label: 'Help Center',
+            href:
+              'https://www.notion.so/reacherhq/Reacher-Help-Center-b21d22a00734457cb8ae44ed9c85b75d'
           }
         ]
       }
@@ -234,7 +239,7 @@ export default class App extends Component {
               <Route path='/pricing' component={PricingPage} />
 
               <Route
-                path='/commercial-license'
+                path='/self-host'
                 component={() => {
                   window.location.href =
                     'https://www.notion.so/reacherhq/Commercial-Licenses-for-OEMs-ISVs-and-VARs-52462945b3b0428d8b312188e2e6c4fd'
