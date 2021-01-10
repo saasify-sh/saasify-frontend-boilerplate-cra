@@ -165,7 +165,7 @@ const saasifyConfig = {
           },
           {
             label: 'Github',
-            href: 'https://github.com/reacherhq/backend'
+            href: 'https://github.com/amaurymartiny/check-if-email-exists'
           },
           {
             label: 'Help Center',
