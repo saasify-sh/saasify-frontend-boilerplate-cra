@@ -39,7 +39,8 @@ p {
   margin-bottom: 0;
 }
 
-a[href="https://github.com/Redocly/redoc"] {
+a[href="https://github.com/Redocly/redoc"]
+{
   display: none !important;
 }
 
@@ -58,6 +59,6 @@ summary {
 }
 
 :global(.swagger-ui) {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
 }

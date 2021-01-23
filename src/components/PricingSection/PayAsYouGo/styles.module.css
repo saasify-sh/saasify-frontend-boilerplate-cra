@@ -1,0 +1,31 @@
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  text-align: left;
+}
+
+.column-content {
+  text-align: center;
+}
+
+.emailsInput {
+  color: rgba(0, 0, 0, 0.65);
+  border-width: 0 0 2px;
+  border-color: rgb(104, 103, 246);
+  margin-bottom: 24px;
+  outline: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.emailsWarning {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.infinity {
+  height: 1.5em;
+}

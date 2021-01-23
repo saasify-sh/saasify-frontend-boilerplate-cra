@@ -63,7 +63,7 @@ const saasifyConfig = {
         },
       {
         label: 'Contact Us',
-        href: 'mailto:support@reacher.email'
+        href: 'mailto:amaury@reacher.email'
       }
     ],
     actions: ({ auth }) => {
@@ -161,7 +161,7 @@ const saasifyConfig = {
         links: [
           {
             label: 'Email',
-            href: 'mailto:support@reacher.email'
+            href: 'mailto:amaury@reacher.email'
           },
           {
             label: 'Github',

@@ -96,7 +96,7 @@ export class PrivacyPage extends Component {
             information from a child under 13 without verification of parental
             consent, we will delete that information. If you believe we might
             have any information from or about a child under 13, please contact
-            us at <u>support@reacher.email</u>.
+            us at <u>amaury@reacher.email</u>.
           </p>
           <p>
             <strong>
@@ -378,7 +378,7 @@ export class PrivacyPage extends Component {
             the Website and visiting your account profile page.
           </p>
           <p>
-            You may also send us an email at <u>support@reacher.email</u> to
+            You may also send us an email at <u>amaury@reacher.email</u> to
             request access to, correct or delete any personal information that
             you have provided to us. We cannot delete your personal information
             except by also deleting your user account. We may not accommodate a
@@ -404,7 +404,7 @@ export class PrivacyPage extends Component {
             that are California residents to request certain information
             regarding our disclosure of personal information to third parties
             for their direct marketing purposes.&nbsp; To make such a request,
-            please send an email to <u>support@reacher.email</u> or write us at:
+            please send an email to <u>amaury@reacher.email</u> or write us at:
             110 Livingston Street, #3J, Brooklyn, NY 11201
           </p>
           <p>
@@ -459,7 +459,7 @@ export class PrivacyPage extends Component {
           </p>
           <p>
             To ask questions or comment about this privacy policy and our
-            privacy practices, contact us at support@reacher.email.
+            privacy practices, contact us at amaury@reacher.email.
           </p>
         </div>
 

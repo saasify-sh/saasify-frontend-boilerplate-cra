@@ -2,8 +2,8 @@
   /* TODO add postcss to resolve vars for IE11 */
   --filter-tint: brightness(1.2);
   --color-fg: #3a3a3a;
-  --max-width: 1108px;
-  --max-width-half: 554px;
+  --max-width: 1200px;
+  --max-width-half: 600px;
   --space-xs: 4px;
   --space-s: 8px;
   --space-m: 16px;
@@ -1046,6 +1046,7 @@
 .theme-waves .pricing-section .plan .pricing .column {
   font-weight: 400;
   opacity: 0.6;
+  text-align: center;
 }
 
 .theme-waves .plan .cta-button {

@@ -190,7 +190,7 @@ export class TermsPage extends Component {
           <p>
             If you wish to make any use of material on the Website other than
             that set out in this section, please address your request to:
-            support@reacher.email
+            amaury@reacher.email
           </p>
           <p>
             If you print, copy, modify, download or otherwise use or provide any
@@ -533,7 +533,7 @@ export class TermsPage extends Component {
           </p>
           <p>
             Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            support@reacher.email
+            amaury@reacher.email
           </p>
           <p>&nbsp;</p>
           <p>
@@ -871,7 +871,7 @@ export class TermsPage extends Component {
           <p>
             All other feedback, comments, requests for technical support and
             other communications relating to the Website should be directed to:
-            support@reacher.email.
+            amaury@reacher.email.
           </p>
         </div>
 

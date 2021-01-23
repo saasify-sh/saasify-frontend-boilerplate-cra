@@ -1,36 +1,27 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
-import { CTAButton, Section, UndrawSVG, theme } from 'react-saasify'
+import { CTAButton, Section, theme } from 'react-saasify'
 
 import styles from './styles.module.css'
 
 export class EnterpriseSection extends Component {
   render() {
     return (
-      <Section id='self-host' title='Self-Host it Yourself' {...this.props}>
-        <p>
-          If you do not want to use the SaaS offering above, Reacher is
+      <Section
+        id='self-host'
+        title='Questions about the Pricing?'
+        {...this.props}
+      >
+        <p className={theme(styles, 'reply')}>
+          Feel free to send us an email, or use the chat box on the bottom right
+          corner.
           <br />
-          <strong>open-source</strong> and allows you to host the service
-          yourself.
-        </p>
-        <p>
-          Reacher provides its source code under a dual license model designed
-          <br />
-          to meet the development and distribution needs of both commercial
-          <br />
-          distributors (such as OEMs, ISVs and VARs) and open source projects.
+          We reply pretty fast.
         </p>
 
-        <UndrawSVG
-          name='business_plan'
-          className={theme(styles, 'illustration')}
-        />
-
-        <Link to='/self-host'>
-          <CTAButton>Learn More about Self-Hosting</CTAButton>
-        </Link>
+        <a href='mailto:amaury@reacher.email'>
+          <CTAButton>Ask us a question</CTAButton>
+        </a>
       </Section>
     )
   }

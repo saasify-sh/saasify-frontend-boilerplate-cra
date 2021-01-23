@@ -1,0 +1,16 @@
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  text-align: left;
+}
+
+.column-content {
+  text-align: center;
+}
+
+.infinity {
+  height: 1.5em;
+}

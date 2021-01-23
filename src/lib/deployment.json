@@ -5,7 +5,7 @@
   "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [FAQ](https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
   "keywords": [],
   "proxyMode": "active",
-  "hash": "2d2ce35c",
+  "hash": "dd31f2c6",
   "user": "5ea9834bc5a438003c319d1e",
   "project": {
     "keywords": [],
@@ -39,13 +39,17 @@
       {
         "deployment": "amaurymartiny/reacher@eb5494d3",
         "version": "0.1.5"
+      },
+      {
+        "deployment": "amaurymartiny/reacher@2d2ce35c",
+        "version": "0.1.6"
       }
     ],
     "createdAt": "2020-04-30T19:26:19.316Z",
-    "updatedAt": "2020-11-02T20:31:17.274Z",
-    "lastDeployment": "amaurymartiny/reacher@2d2ce35c",
-    "lastPublishedDeployment": "amaurymartiny/reacher@eb5494d3",
-    "lastPublishedVersion": "0.1.5",
+    "updatedAt": "2021-01-23T14:11:37.391Z",
+    "lastDeployment": "amaurymartiny/reacher@dd31f2c6",
+    "lastPublishedDeployment": "amaurymartiny/reacher@2d2ce35c",
+    "lastPublishedVersion": "0.1.6",
     "stripeBaseProduct": "prod_HGYDgL6YePm4Rq",
     "stripeRequestProduct": "prod_HGYD0bZ1NHWh6F",
     "stripeMetricProducts": {},
@@ -57,7 +61,7 @@
     ],
     "id": "amaurymartiny/reacher"
   },
-  "version": "0.1.6",
+  "version": "0.1.7",
   "pricingPlans": [
     {
       "features": [
@@ -94,11 +98,11 @@
     },
     {
       "features": [
-        "See [Full Pricing Details](https://www.notion.so/Enterprise-Pricing-dd54b64b2fcc43c1811ead80e004a1e2), we offer flexible pricing options.",
+        "Leverage our servers with **high IP reputation**.",
+        "See [Full Pricing Details](https://www.notion.so/Enterprise-Pricing-dd54b64b2fcc43c1811ead80e004a1e2) with flexible options.",
         "The more you verify, the **lower your total cost**.",
         "[Full-featured](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d) email verifications.",
-        "**Priority** customer support.",
-        "Cancel anytime."
+        "**Priority** customer support."
       ],
       "auth": true,
       "amount": 0,
@@ -167,10 +171,46 @@
       "metricIds": {},
       "_stripeMetricPlansTest": {},
       "_stripeMetricPlansLive": {},
-      "name": "Pay-As-You-Go",
+      "name": "Pay-As-You-Go SaaS",
       "slug": "pay-as-you-go-v2",
       "baseId": "base:ea3c1adab87839930b945521218b44ea8b566b5e3aafef0ff95393f4c3d3aabe:acct_1GdjpUA852XqldwX",
       "requestsId": "requests:a9f8d962538bbbfba2e990479eac3457768b30923e7e1e86cd2ed892d0add29d:acct_1GdjpUA852XqldwX"
+    },
+    {
+      "features": [
+        "Send email verifications from **your own servers**.",
+        "See [this document](https://www.notion.so/reacherhq/Commercial-Licenses-for-OEMs-ISVs-and-VARs-52462945b3b0428d8b312188e2e6c4fd) for more info and EULA.",
+        "[Full-featured](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d) email verifications.",
+        "**Docker** format, or one-click deploy to **Heroku**.",
+        "Try the open-source version **for free**.",
+        "**Priority** customer support."
+      ],
+      "auth": true,
+      "amount": 39900,
+      "requests": {
+        "slug": "requests",
+        "amount": 0,
+        "usageType": "licensed",
+        "billingScheme": "per_unit",
+        "tiersMode": "graduated",
+        "rateLimit": null,
+        "tiers": [],
+        "label": "requests",
+        "unitLabel": "request"
+      },
+      "rateLimit": {
+        "enabled": true,
+        "requestsInterval": 2628000,
+        "requestsMaxPerInterval": 50
+      },
+      "metrics": [],
+      "metricIds": {},
+      "_stripeMetricPlansTest": {},
+      "_stripeMetricPlansLive": {},
+      "name": "Commercial License for Self-Hosting",
+      "slug": "self-host-v1",
+      "baseId": "base:17be436799430fd6ef5477b8257639ff6cdeae4f223102111d501495e73a7566:acct_1GdjpUA852XqldwX",
+      "requestsId": "requests:cb2a1a3f3de4209f1c435dea65d7fe2b3ff4ae9d2e8c626a04db486d6a764097:acct_1GdjpUA852XqldwX"
     }
   ],
   "coupons": [],
@@ -186,8 +226,8 @@
       "headers": {},
       "pricingPlanConfig": {},
       "path": "/check_email",
-      "createdAt": "2020-11-02T20:31:17.127Z",
-      "updatedAt": "2020-11-02T20:31:17.127Z",
+      "createdAt": "2021-01-23T14:11:37.241Z",
+      "updatedAt": "2021-01-23T14:11:37.241Z",
       "pathExpress": "/check_email",
       "definition": {
         "params": {
@@ -199,16 +239,14 @@
                 "type": "string"
               }
             },
-            "required": [
-              "x-saasify-proxy-secret"
-            ],
+            "required": ["x-saasify-proxy-secret"],
             "title": "CheckEmailInput",
             "description": "Input containing all parameters necessary for an email verification."
           }
         }
       },
-      "url": "https://ssfy.sh/amaurymartiny/reacher@2d2ce35c/check_email",
-      "route": "/amaurymartiny/reacher@2d2ce35c/check_email"
+      "url": "https://ssfy.sh/amaurymartiny/reacher@dd31f2c6/check_email",
+      "route": "/amaurymartiny/reacher@dd31f2c6/check_email"
     }
   ],
   "saas": {
@@ -280,13 +318,13 @@
         "cta": "50 emails/mo for free"
       },
       "navFooter": {
-        "email": "mailto:support@reacher.email",
+        "email": "mailto:amaury@reacher.email",
         "location": "Made in a small independent studio in Berlin 🇩🇪.",
         "slack": false
       },
       "navHeader": {
         "cta": "Sign up",
-        "support": "mailto:support@reacher.email"
+        "support": "mailto:amaury@reacher.email"
       }
     },
     "theme": {
@@ -298,11 +336,11 @@
       "backgroundImage": null
     }
   },
-  "createdAt": "2020-11-02T20:31:17.127Z",
-  "updatedAt": "2020-11-02T20:31:17.127Z",
-  "url": "https://ssfy.sh/amaurymartiny/reacher@2d2ce35c",
-  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@2d2ce35c",
-  "saasUrl": "https://amaurymartiny_reacher_2d2ce35c.saasify.sh",
+  "createdAt": "2021-01-23T14:11:37.241Z",
+  "updatedAt": "2021-01-23T14:11:37.241Z",
+  "url": "https://ssfy.sh/amaurymartiny/reacher@dd31f2c6",
+  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@dd31f2c6",
+  "saasUrl": "https://amaurymartiny_reacher_dd31f2c6.saasify.sh",
   "hasFreeTier": true,
   "authProviders": {
     "google": {
@@ -510,14 +548,7 @@
               "$ref": "#/components/schemas/SyntaxDetails"
             }
           },
-          "required": [
-            "input",
-            "misc",
-            "mx",
-            "smtp",
-            "syntax",
-            "is_reachable"
-          ]
+          "required": ["input", "misc", "mx", "smtp", "syntax", "is_reachable"]
         },
         "Error": {
           "title": "Error",
@@ -533,10 +564,7 @@
               "description": "A human-readable description of the error."
             }
           },
-          "required": [
-            "type",
-            "message"
-          ]
+          "required": ["type", "message"]
         },
         "MiscDetails": {
           "title": "MiscDetails",
@@ -552,10 +580,7 @@
               "description": "Is this email a role-based account?"
             }
           },
-          "required": [
-            "is_disposable",
-            "is_role_account"
-          ]
+          "required": ["is_disposable", "is_role_account"]
         },
         "MxDetails": {
           "title": "MxDetails",
@@ -573,10 +598,7 @@
               }
             }
           },
-          "required": [
-            "accepts_mail",
-            "records"
-          ],
+          "required": ["accepts_mail", "records"],
           "description": "Object holding the MX details of the mail server."
         },
         "SmtpDetails": {
@@ -631,21 +653,12 @@
               "description": "The username of the email, i.e. the part before the \"@\" symbol."
             }
           },
-          "required": [
-            "domain",
-            "is_valid_syntax",
-            "username"
-          ]
+          "required": ["domain", "is_valid_syntax", "username"]
         },
         "Reachable": {
           "type": "string",
           "title": "Reachable",
-          "enum": [
-            "invalid",
-            "unknown",
-            "safe",
-            "risky"
-          ],
+          "enum": ["invalid", "unknown", "safe", "risky"],
           "description": "An enum to describe how confident we are that the recipient address is real: `safe`, `risky`, `invalid` and `unknown`. Check our FAQ to know the meanings of the 4 possibilities: https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb."
         },
         "CheckEmailInput": {
@@ -666,13 +679,11 @@
               "description": "In the SMTP connection, the EHLO hostname."
             }
           },
-          "required": [
-            "to_email"
-          ]
+          "required": ["to_email"]
         }
       },
       "securitySchemes": {}
     }
   },
-  "id": "amaurymartiny/reacher@2d2ce35c"
+  "id": "amaurymartiny/reacher@dd31f2c6"
 }
