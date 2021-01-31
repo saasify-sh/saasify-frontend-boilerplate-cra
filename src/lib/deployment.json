@@ -2,10 +2,10 @@
   "enabled": true,
   "published": false,
   "description": "Powered by Saasify",
-  "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [FAQ](https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
+  "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [Help Center](https://help.reacher.email).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
   "keywords": [],
   "proxyMode": "active",
-  "hash": "dd31f2c6",
+  "hash": "0d919999",
   "user": "5ea9834bc5a438003c319d1e",
   "project": {
     "keywords": [],
@@ -46,8 +46,8 @@
       }
     ],
     "createdAt": "2020-04-30T19:26:19.316Z",
-    "updatedAt": "2021-01-23T14:11:37.391Z",
-    "lastDeployment": "amaurymartiny/reacher@dd31f2c6",
+    "updatedAt": "2021-01-31T16:53:39.748Z",
+    "lastDeployment": "amaurymartiny/reacher@0d919999",
     "lastPublishedDeployment": "amaurymartiny/reacher@2d2ce35c",
     "lastPublishedVersion": "0.1.6",
     "stripeBaseProduct": "prod_HGYDgL6YePm4Rq",
@@ -65,8 +65,10 @@
   "pricingPlans": [
     {
       "features": [
+        "[Full-featured](https://help.reacher.email/email-attributes-inside-json) email verifications.",
+        "Support via [Github Issues](https://github.com/reacherhq/check-if-email-exists/issues).",
+        "Use **Reacher servers** with high IP reputation.",
         "**50 emails for free** per month.",
-        "[Full-featured](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d) email verifications.",
         "No credit card required."
       ],
       "auth": false,
@@ -98,11 +100,12 @@
     },
     {
       "features": [
-        "Leverage our servers with **high IP reputation**.",
-        "See [Full Pricing Details](https://www.notion.so/Enterprise-Pricing-dd54b64b2fcc43c1811ead80e004a1e2) with flexible options.",
+        "[Full-featured](https://help.reacher.email/email-attributes-inside-json) email verifications.",
+        "**Priority** customer support.",
+        "Use **Reacher servers** with high IP reputation.",
+        "See Pay-as-you-Go [Pricing Details](https://help.reacher.email/pay-as-you-grow-saas-pricing).",
         "The more you verify, the **lower your total cost**.",
-        "[Full-featured](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d) email verifications.",
-        "**Priority** customer support."
+        "Cancel anytime."
       ],
       "auth": true,
       "amount": 0,
@@ -178,12 +181,13 @@
     },
     {
       "features": [
+        "[Full-featured](https://help.reacher.email/email-attributes-inside-json) email verifications.",
+        "**Priority** customer support with 2h call included.",
         "Send email verifications from **your own servers**.",
-        "See [this document](https://www.notion.so/reacherhq/Commercial-Licenses-for-OEMs-ISVs-and-VARs-52462945b3b0428d8b312188e2e6c4fd) for more info and EULA.",
-        "[Full-featured](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d) email verifications.",
-        "**Docker** format, or one-click deploy to **Heroku**.",
-        "Try the open-source version **for free**.",
-        "**Priority** customer support."
+        "[Click here](https://help.reacher.email/commercial-license-for-oems-isvs-and-vars) for more info and EULA.",
+        "Comes with [one-click-deploys](https://help.reacher.email/self-host-guide) (Heroku, Docker).",
+        "Cancel anytime.",
+        "🤔 Want a **free trial** before you buy? Feel free to try self-hosting with our [open-source guide](https://help.reacher.email/self-host-guide), and subscribe once you're ready."
       ],
       "auth": true,
       "amount": 39900,
@@ -226,8 +230,8 @@
       "headers": {},
       "pricingPlanConfig": {},
       "path": "/check_email",
-      "createdAt": "2021-01-23T14:11:37.241Z",
-      "updatedAt": "2021-01-23T14:11:37.241Z",
+      "createdAt": "2021-01-31T16:53:39.606Z",
+      "updatedAt": "2021-01-31T16:53:39.606Z",
       "pathExpress": "/check_email",
       "definition": {
         "params": {
@@ -239,14 +243,16 @@
                 "type": "string"
               }
             },
-            "required": ["x-saasify-proxy-secret"],
+            "required": [
+              "x-saasify-proxy-secret"
+            ],
             "title": "CheckEmailInput",
             "description": "Input containing all parameters necessary for an email verification."
           }
         }
       },
-      "url": "https://ssfy.sh/amaurymartiny/reacher@dd31f2c6/check_email",
-      "route": "/amaurymartiny/reacher@dd31f2c6/check_email"
+      "url": "https://ssfy.sh/amaurymartiny/reacher@0d919999/check_email",
+      "route": "/amaurymartiny/reacher@0d919999/check_email"
     }
   ],
   "saas": {
@@ -280,7 +286,7 @@
       },
       {
         "name": "Fully Featured",
-        "desc": "We check for MTA, MX records, SMTP, hard bounces, catch-all, disposable email, role-based accounts... and [much more](https://www.notion.so/reacherhq/How-Reacher-Verifies-Emails-2927ca5191d744e6b15652fc08d2dd3d).",
+        "desc": "We check for MTA, MX records, SMTP, hard bounces, catch-all, disposable email, role-based accounts... and [much more](https://help.reacher.email/email-attributes-inside-json).",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/377b175b9d6cd568642424f37b50445ebe197659.svg"
       },
       {
@@ -300,7 +306,7 @@
       },
       {
         "name": "Powerful API",
-        "desc": "Advanced integrations available programatically via our [REST API](/docs#section/API).",
+        "desc": "Advanced integrations available programatically via our [REST API](https://help.reacher.email/rest-api-documentation).",
         "icon": "https://storage.googleapis.com/saasify-uploads-prod/c3cc80bf290617979fe9c89cabd3d181c0d34cd1.svg"
       },
       {
@@ -336,11 +342,11 @@
       "backgroundImage": null
     }
   },
-  "createdAt": "2021-01-23T14:11:37.241Z",
-  "updatedAt": "2021-01-23T14:11:37.241Z",
-  "url": "https://ssfy.sh/amaurymartiny/reacher@dd31f2c6",
-  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@dd31f2c6",
-  "saasUrl": "https://amaurymartiny_reacher_dd31f2c6.saasify.sh",
+  "createdAt": "2021-01-31T16:53:39.606Z",
+  "updatedAt": "2021-01-31T16:53:39.606Z",
+  "url": "https://ssfy.sh/amaurymartiny/reacher@0d919999",
+  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@0d919999",
+  "saasUrl": "https://amaurymartiny_reacher_0d919999.saasify.sh",
   "hasFreeTier": true,
   "authProviders": {
     "google": {
@@ -548,7 +554,14 @@
               "$ref": "#/components/schemas/SyntaxDetails"
             }
           },
-          "required": ["input", "misc", "mx", "smtp", "syntax", "is_reachable"]
+          "required": [
+            "input",
+            "misc",
+            "mx",
+            "smtp",
+            "syntax",
+            "is_reachable"
+          ]
         },
         "Error": {
           "title": "Error",
@@ -564,7 +577,10 @@
               "description": "A human-readable description of the error."
             }
           },
-          "required": ["type", "message"]
+          "required": [
+            "type",
+            "message"
+          ]
         },
         "MiscDetails": {
           "title": "MiscDetails",
@@ -580,7 +596,10 @@
               "description": "Is this email a role-based account?"
             }
           },
-          "required": ["is_disposable", "is_role_account"]
+          "required": [
+            "is_disposable",
+            "is_role_account"
+          ]
         },
         "MxDetails": {
           "title": "MxDetails",
@@ -598,7 +617,10 @@
               }
             }
           },
-          "required": ["accepts_mail", "records"],
+          "required": [
+            "accepts_mail",
+            "records"
+          ],
           "description": "Object holding the MX details of the mail server."
         },
         "SmtpDetails": {
@@ -653,13 +675,22 @@
               "description": "The username of the email, i.e. the part before the \"@\" symbol."
             }
           },
-          "required": ["domain", "is_valid_syntax", "username"]
+          "required": [
+            "domain",
+            "is_valid_syntax",
+            "username"
+          ]
         },
         "Reachable": {
           "type": "string",
           "title": "Reachable",
-          "enum": ["invalid", "unknown", "safe", "risky"],
-          "description": "An enum to describe how confident we are that the recipient address is real: `safe`, `risky`, `invalid` and `unknown`. Check our FAQ to know the meanings of the 4 possibilities: https://www.notion.so/reacherhq/Reacher-FAQ-389d6f51a53749f29d914239613c64eb."
+          "enum": [
+            "invalid",
+            "unknown",
+            "safe",
+            "risky"
+          ],
+          "description": "An enum to describe how confident we are that the recipient address is real: `safe`, `risky`, `invalid` and `unknown`. Check our FAQ to know the meanings of the 4 possibilities: https://help.reacher.email/email-attributes-inside-json."
         },
         "CheckEmailInput": {
           "title": "CheckEmailInput",
@@ -679,11 +710,13 @@
               "description": "In the SMTP connection, the EHLO hostname."
             }
           },
-          "required": ["to_email"]
+          "required": [
+            "to_email"
+          ]
         }
       },
       "securitySchemes": {}
     }
   },
-  "id": "amaurymartiny/reacher@dd31f2c6"
+  "id": "amaurymartiny/reacher@0d919999"
 }

@@ -38,6 +38,13 @@ export class PayAsYouGo extends Component {
         key={plan.slug} // pay-as-you-go-v1
         plan={{
           ...plan,
+          name: (
+            <span>
+              Pay-as-you-Go SaaS
+              <br />
+              <span className={styles.subtitle}>(⭐ Most Popular)</span>
+            </span>
+          ),
           context: null, // Remove top section hack.
           desc: (
             <div>
@@ -59,7 +66,7 @@ export class PayAsYouGo extends Component {
                 * The price below is indicative. The actual price will be
                 determined by{' '}
                 <a
-                  href='https://www.notion.so/Enterprise-Pricing-dd54b64b2fcc43c1811ead80e004a1e2'
+                  href='https://help.reacher.email/pay-as-you-grow-saas-pricing'
                   rel='noreferrer'
                   target='_blank'
                 >
@@ -99,7 +106,9 @@ export class PayAsYouGo extends Component {
             plan.features[0],
             plan.features[1],
             <Divider key='divider' />,
-            ...plan.features.slice(2)
+            plan.features[2],
+            <Divider key='divider' />,
+            ...plan.features.slice(3)
           ],
           // Dynamic pricing.
           price: `$${formatPrice(

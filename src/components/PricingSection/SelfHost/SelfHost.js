@@ -7,7 +7,7 @@ import infinity from 'react-saasify/src/assets/infinity.svg'
 
 import plans from 'lib/pricing-plans'
 
-import styles from './styles.module.css'
+import styles from '../PayAsYouGo/styles.module.css'
 
 const plan = plans[2] // self-host
 
@@ -53,7 +53,11 @@ export class SelfHost extends Component {
             plan.features[0],
             plan.features[1],
             <Divider key='divider' />,
-            ...plan.features.slice(2)
+            plan.features[2],
+            <Divider key='divider' />,
+            ...plan.features.slice(3, 6),
+            <Divider key='divider' />,
+            ...plan.features.slice(6)
           ],
           price: plan.price
         }}

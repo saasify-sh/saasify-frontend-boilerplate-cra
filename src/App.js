@@ -53,17 +53,12 @@ const saasifyConfig = {
   header: {
     links: [
       {
+        label: 'Help Center',
+        href: 'https://help.reacher.email'
+      },
+      {
         label: 'Pricing',
         to: '/pricing'
-      },
-      () =>
-        deployment.saas.sections?.docs !== false && {
-          label: 'Docs',
-          to: '/docs'
-        },
-      {
-        label: 'Contact Us',
-        href: 'mailto:amaury@reacher.email'
       }
     ],
     actions: ({ auth }) => {
@@ -115,15 +110,6 @@ const saasifyConfig = {
             label: 'Pricing',
             to: '/pricing'
           },
-          () =>
-            deployment.saas.sections?.docs !== false && {
-              label: 'Docs',
-              to: '/docs'
-            },
-          {
-            label: 'Self-Host Reacher',
-            to: '/self-host'
-          },
           ({ auth }) =>
             auth.isAuthenticated
               ? {
@@ -144,15 +130,19 @@ const saasifyConfig = {
         ]
       },
       {
-        label: 'Legal',
+        label: 'Help Center',
         links: [
           {
-            label: 'Terms',
-            to: '/terms'
+            label: 'Self-Host',
+            href: 'https://help.reacher.email/self-host-guide'
           },
           {
-            label: 'Privacy',
-            to: '/privacy'
+            label: 'Terms of Service',
+            href: 'https://help.reacher.email/terms-of-service'
+          },
+          {
+            label: 'Privacy Policy',
+            href: 'https://help.reacher.email/privacy-policy'
           }
         ]
       },
@@ -165,12 +155,11 @@ const saasifyConfig = {
           },
           {
             label: 'Github',
-            href: 'https://github.com/amaurymartiny/check-if-email-exists'
+            href: 'https://github.com/reacherhq/check-if-email-exists'
           },
           {
             label: 'Help Center',
-            href:
-              'https://www.notion.so/reacherhq/Reacher-Help-Center-b21d22a00734457cb8ae44ed9c85b75d'
+            href: 'https://help.reacher.email'
           }
         ]
       }
@@ -237,20 +226,6 @@ export default class App extends Component {
               <Route exact path='/' component={HomePage} />
 
               <Route path='/pricing' component={PricingPage} />
-
-              <Route
-                path='/self-host'
-                component={() => {
-                  window.location.href =
-                    'https://www.notion.so/reacherhq/Commercial-Licenses-for-OEMs-ISVs-and-VARs-52462945b3b0428d8b312188e2e6c4fd'
-                  return null
-                }}
-              />
-
-              <Route path='/docs' component={DocsPage} />
-
-              <Route path='/terms' component={TermsPage} />
-              <Route path='/privacy' component={PrivacyPage} />
 
               <Route path='/login' component={LoginPage} />
               <Route path='/signup' component={SignupPage} />

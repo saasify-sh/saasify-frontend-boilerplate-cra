@@ -126,7 +126,11 @@ export class OnboardingSection extends Component {
           extra={
             <>
               {saas?.docs !== false && (
-                <Button type='secondary' key='docs' href='/docs'>
+                <Button
+                  type='secondary'
+                  key='docs'
+                  href='https://help.reacher.email'
+                >
                   View docs
                 </Button>
               )}
@@ -175,7 +179,9 @@ export class OnboardingSection extends Component {
                   ) : hasWebapp ? (
                     <span>
                       If you want to use the API, you'll need your private auth
-                      token. See the <Link to='/docs'>docs</Link> for more info.
+                      token. See the{' '}
+                      <a href='https://help.reacher.email'>docs</a> for more
+                      info.
                     </span>
                   ) : (
                     <span>
@@ -213,10 +219,7 @@ export class OnboardingSection extends Component {
                       )}
                       <br />
                       For more details, check out the{' '}
-                      <Link to='/docs#operation/post-check-email'>
-                        documentation
-                      </Link>
-                      .
+                      <a href='https://help.reacher.email'>documentation</a>.
                     </span>
                   )}
 
