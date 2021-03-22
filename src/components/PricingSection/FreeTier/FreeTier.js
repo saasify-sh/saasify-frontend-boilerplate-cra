@@ -24,7 +24,7 @@ export class FreeTier extends Component {
             <span>
               Free Tier
               <br />
-              <span className={styles.subtitle}>(Free forever)</span>
+              <span className={styles.subtitle}>(🙏 Free forever)</span>
             </span>
           ),
           context: null, // Remove top section hack.

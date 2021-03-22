@@ -3,13 +3,12 @@ import React, { Component, Fragment } from 'react'
 import { observer } from 'mobx-react'
 
 import { Divider, PricingPlan, theme } from 'react-saasify'
-import infinity from 'react-saasify/src/assets/infinity.svg'
 
 import plans, { formatPrice } from 'lib/pricing-plans'
 
 import styles from './styles.module.css'
 
-// Tiers for the pay-as-you-fo-v2 plan.
+// Tiers for the pay-as-you-fo-v3 plan.
 const plan = plans[1]
 const payg = plan.original.requests
 
@@ -92,12 +91,7 @@ export class PayAsYouGo extends Component {
                   </div>
 
                   <div className={theme(styles, 'column-content')}>
-                    <img
-                      alt='unlimited'
-                      src={infinity}
-                      className={theme(styles, 'infinity')}
-                    />{' '}
-                    / month
+                    {plan.requests.rateLimit}
                   </div>
                 </Fragment>
               )}
@@ -111,9 +105,12 @@ export class PayAsYouGo extends Component {
             ...plan.features.slice(3)
           ],
           // Dynamic pricing.
-          price: `$${formatPrice(
-            Math.round(calculatePrice(this.state.emails))
-          )}*`
+          price:
+            this.state.emails > 10000
+              ? 'MAX 10k emails'
+              : `$${formatPrice(
+                  Math.round(calculatePrice(this.state.emails))
+                )}*`
         }}
       />
     )

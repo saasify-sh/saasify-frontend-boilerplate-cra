@@ -22,6 +22,13 @@ export class SelfHost extends Component {
         plan={{
           ...plan,
           context: null, // Remove top section hack.
+          name: (
+            <span>
+              Commercial License
+              <br />
+              <span className={styles.subtitle}>(🏠 For Self-Hosting)</span>
+            </span>
+          ),
           desc: null,
           features: [
             <div className={theme(styles, 'pricing')} key='api-calls'>
