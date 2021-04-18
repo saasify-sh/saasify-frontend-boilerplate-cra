@@ -1,11 +1,11 @@
 {
   "enabled": true,
-  "published": true,
+  "published": false,
   "description": "Powered by Saasify",
   "readme": "## Quick Start\n\nWhether you’re new to email verifications or seasoned in all things SMTP, this is where you’ll find out how to develop applications with Reacher. We offer simple code snippets for several popular programming languages.\n\nThe Reacher API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Our API has predictable resource-oriented URLs, accepts [form-encoded](<https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms>) request bodies, returns [JSON-encoded](www.json.org) responses, and uses standard HTTP response codes, authentication, and verbs.\n\nThe documentation on this page focuses on the technical side of Reacher. If you have non-technical question, be sure to also check our [Help Center](https://help.reacher.email).\n\n### Working with Reacher's API\n\nThe first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.\n\nThe next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.\n",
   "keywords": [],
   "proxyMode": "active",
-  "hash": "2cb4ed12",
+  "hash": "b3d74d1b",
   "user": "5ea9834bc5a438003c319d1e",
   "project": {
     "keywords": [],
@@ -54,8 +54,8 @@
       }
     ],
     "createdAt": "2020-04-30T19:26:19.316Z",
-    "updatedAt": "2021-03-22T09:44:31.839Z",
-    "lastDeployment": "amaurymartiny/reacher@2cb4ed12",
+    "updatedAt": "2021-04-18T21:47:58.849Z",
+    "lastDeployment": "amaurymartiny/reacher@b3d74d1b",
     "lastPublishedDeployment": "amaurymartiny/reacher@2cb4ed12",
     "lastPublishedVersion": "0.1.8",
     "stripeBaseProduct": "prod_HGYDgL6YePm4Rq",
@@ -69,7 +69,7 @@
     ],
     "id": "amaurymartiny/reacher"
   },
-  "version": "0.1.8",
+  "version": "0.1.9",
   "pricingPlans": [
     {
       "features": [
@@ -109,71 +109,21 @@
     {
       "features": [
         "[Full-featured](https://help.reacher.email/email-attributes-inside-json) email verifications.",
-        "**Priority** customer support.",
+        "**Priority** customer support via email/chat.",
         "Use **Reacher servers** with high IP reputation.",
-        "Up to 10K calls/month, see [Pricing Details](https://help.reacher.email/pay-as-you-grow-saas-pricing).",
-        "The more you verify, the **lower your total cost**.",
+        "Up to 10K calls/month.",
         "Cancel anytime."
       ],
       "auth": true,
-      "amount": 0,
+      "amount": 6900,
       "requests": {
         "slug": "requests",
         "amount": 0,
         "usageType": "licensed",
-        "billingScheme": "tiered",
-        "tiersMode": "volume",
+        "billingScheme": "per_unit",
+        "tiersMode": "graduated",
         "rateLimit": null,
-        "tiers": [
-          {
-            "upTo": "999",
-            "unitAmount": 1.4
-          },
-          {
-            "upTo": "2499",
-            "unitAmount": 1.16
-          },
-          {
-            "upTo": "4999",
-            "unitAmount": 0.98
-          },
-          {
-            "upTo": "9999",
-            "unitAmount": 0.69
-          },
-          {
-            "upTo": "24999",
-            "unitAmount": 0.593
-          },
-          {
-            "upTo": "49999",
-            "unitAmount": 0.398
-          },
-          {
-            "upTo": "99999",
-            "unitAmount": 0.299
-          },
-          {
-            "upTo": "249999",
-            "unitAmount": 0.2
-          },
-          {
-            "upTo": "499999",
-            "unitAmount": 0.16
-          },
-          {
-            "upTo": "999999",
-            "unitAmount": 0.125
-          },
-          {
-            "upTo": "2499999",
-            "unitAmount": 0.1
-          },
-          {
-            "upTo": "inf",
-            "unitAmount": 0.075
-          }
-        ],
+        "tiers": [],
         "label": "requests",
         "unitLabel": "request"
       },
@@ -186,18 +136,17 @@
       "metricIds": {},
       "_stripeMetricPlansTest": {},
       "_stripeMetricPlansLive": {},
-      "name": "Pay-As-You-Go SaaS",
-      "slug": "pay-as-you-go-v3",
-      "baseId": "base:f1d4bca7392f9b7ef2964a03b1eca05d03ef7771337befd90cd00991503b5b26:acct_1GdjpUA852XqldwX",
-      "requestsId": "requests:317ec7c3cb2c71246f78110893fef8d1c06e2fae9c09c1533ddd66c20c4f72df:acct_1GdjpUA852XqldwX"
+      "name": "10k Emails (SaaS)",
+      "slug": "10k-v2",
+      "baseId": "base:94c5b23731ee4baa1458abf85c23568ba41dde2e9471802a5570ab3017c57d6b:acct_1GdjpUA852XqldwX",
+      "requestsId": "requests:b010035a2612d269326264335ddcebe2eeed732a19efab2309f0e39af9e8a0b8:acct_1GdjpUA852XqldwX"
     },
     {
       "features": [
         "[Full-featured](https://help.reacher.email/email-attributes-inside-json) email verifications.",
-        "**Priority** customer support.",
-        "Send email verifications from **your own servers**.",
-        "Use Reacher in your own **commercial apps**.",
-        "Comes with [Self-Host Guides](https://help.reacher.email/self-host-guide) (Heroku, Docker).",
+        "**Priority** customer support via email/chat.",
+        "Self-host Reacher in your **commercial apps**.",
+        "Comes with [self-host guides](https://help.reacher.email/self-host-guide) (Heroku, Docker).",
         "Learn more about the full [terms and details](https://help.reacher.email/reacher-licenses).",
         "🤔 Want a **free trial** before you buy? Feel free to try self-hosting with our [open-source guide](https://help.reacher.email/self-host-guide), and subscribe once you're ready."
       ],
@@ -242,8 +191,8 @@
       "headers": {},
       "pricingPlanConfig": {},
       "path": "/check_email",
-      "createdAt": "2021-03-22T09:43:49.035Z",
-      "updatedAt": "2021-03-22T09:43:49.035Z",
+      "createdAt": "2021-04-18T21:47:58.635Z",
+      "updatedAt": "2021-04-18T21:47:58.635Z",
       "pathExpress": "/check_email",
       "definition": {
         "params": {
@@ -263,8 +212,8 @@
           }
         }
       },
-      "url": "https://ssfy.sh/amaurymartiny/reacher@2cb4ed12/check_email",
-      "route": "/amaurymartiny/reacher@2cb4ed12/check_email"
+      "url": "https://ssfy.sh/amaurymartiny/reacher@b3d74d1b/check_email",
+      "route": "/amaurymartiny/reacher@b3d74d1b/check_email"
     }
   ],
   "saas": {
@@ -354,11 +303,11 @@
       "backgroundImage": null
     }
   },
-  "createdAt": "2021-03-22T09:43:49.035Z",
-  "updatedAt": "2021-03-22T09:44:31.690Z",
-  "url": "https://ssfy.sh/amaurymartiny/reacher@2cb4ed12",
-  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@2cb4ed12",
-  "saasUrl": "https://amaurymartiny_reacher_2cb4ed12.saasify.sh",
+  "createdAt": "2021-04-18T21:47:58.636Z",
+  "updatedAt": "2021-04-18T21:47:58.636Z",
+  "url": "https://ssfy.sh/amaurymartiny/reacher@b3d74d1b",
+  "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/amaurymartiny/reacher@b3d74d1b",
+  "saasUrl": "https://amaurymartiny_reacher_b3d74d1b.saasify.sh",
   "hasFreeTier": true,
   "authProviders": {
     "google": {
@@ -730,5 +679,5 @@
       "securitySchemes": {}
     }
   },
-  "id": "amaurymartiny/reacher@2cb4ed12"
+  "id": "amaurymartiny/reacher@b3d74d1b"
 }

@@ -7,13 +7,7 @@ import { observer, inject } from 'mobx-react'
 import { API, notification, theme } from 'react-saasify'
 import { withTracker } from 'lib/with-tracker'
 
-import {
-  CheckoutForm,
-  Paper,
-  PayAsYouGo,
-  SelfHost,
-  NavHeader
-} from 'components'
+import { CheckoutForm, Paper, Tenk, SelfHost, NavHeader } from 'components'
 
 import deployment from 'lib/deployment'
 import plans from 'lib/pricing-plans'
@@ -64,11 +58,7 @@ export class CheckoutPage extends Component {
         <NavHeader fixed />
 
         <div className={theme(styles, 'content')}>
-          {plan.slug.startsWith('pay-as-you-go') ? (
-            <PayAsYouGo />
-          ) : (
-            <SelfHost />
-          )}
+          {plan.slug.startsWith('10k') ? <Tenk /> : <SelfHost />}
 
           <Paper className={theme(styles, 'checkout-form')}>
             <CheckoutForm

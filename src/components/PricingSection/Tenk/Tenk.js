@@ -3,33 +3,31 @@ import React, { Component, Fragment } from 'react'
 import { observer } from 'mobx-react'
 
 import { Divider, PricingPlan, theme } from 'react-saasify'
-import infinity from 'react-saasify/src/assets/infinity.svg'
 
 import plans from 'lib/pricing-plans'
 
-import styles from '../Tenk/styles.module.css'
+import styles from './styles.module.css'
 
-const plan = plans[2] // self-host
+// Tiers for the 10k-v2 plan.
+const plan = plans[1]
 
 @observer
-export class SelfHost extends Component {
+export class Tenk extends Component {
   render() {
     return (
       <PricingPlan
         className={theme(styles, 'plan')}
-        key={plan.slug} // self-host
-        context={null}
+        key={plan.slug} // 10k-v2
         plan={{
           ...plan,
-          context: null, // Remove top section hack.
           name: (
             <span>
-              Commercial License
+              10K Emails (SaaS)
               <br />
-              <span className={styles.subtitle}>(🏠 For Self-Hosting)</span>
+              <span className={styles.subtitle}>(⭐ Most Popular)</span>
             </span>
           ),
-          desc: null,
+          context: null, // Remove top section hack.
           features: [
             <div className={theme(styles, 'pricing')} key='api-calls'>
               <div />
@@ -46,12 +44,7 @@ export class SelfHost extends Component {
                   </div>
 
                   <div className={theme(styles, 'column-content')}>
-                    <img
-                      alt='unlimited'
-                      src={infinity}
-                      className={theme(styles, 'infinity')}
-                    />{' '}
-                    / month
+                    {plan.requests.rateLimit}
                   </div>
                 </Fragment>
               )}
@@ -60,11 +53,9 @@ export class SelfHost extends Component {
             plan.features[0],
             plan.features[1],
             <Divider key='divider' />,
-            ...plan.features.slice(2, 5),
-            <Divider key='divider' />,
-            ...plan.features.slice(5)
-          ],
-          price: plan.price
+            plan.features[2],
+            ...plan.features.slice(3)
+          ]
         }}
       />
     )

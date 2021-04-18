@@ -6,7 +6,7 @@ import { Divider, PricingPlan, theme } from 'react-saasify'
 
 import plans from 'lib/pricing-plans'
 
-import styles from '../PayAsYouGo/styles.module.css'
+import styles from '../Tenk/styles.module.css'
 
 const plan = plans[0] // free-tier
 
@@ -55,7 +55,6 @@ export class FreeTier extends Component {
             plan.features[1],
             <Divider key='divider' />,
             plan.features[2],
-            <Divider key='divider' />,
             ...plan.features.slice(3)
           ],
           price: plan.price

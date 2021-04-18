@@ -5,7 +5,7 @@ import { observer } from 'mobx-react'
 import { Section, theme } from 'react-saasify'
 
 import { FreeTier } from './FreeTier'
-import { PayAsYouGo } from './PayAsYouGo'
+import { Tenk } from './Tenk'
 import { SelfHost } from './SelfHost'
 
 import styles from './styles.module.css'
@@ -27,7 +27,7 @@ export class PricingSection extends Component {
       >
         <div className={theme(styles, 'plans')}>
           <FreeTier />
-          <PayAsYouGo />
+          <Tenk />
           <SelfHost />
         </div>
       </Section>
