@@ -52,13 +52,14 @@ export class OnboardingSection extends Component {
     const hasWebapp = !!saas?.webapp?.url
 
     // Show
-    // https://ssfy.sh/amaurymartiny/reacher@0.1.5/check_email
+    // https://api.reacher.email/v0/check_email
     // instead of
     // https://ssfy.sh/amaurymartiny/reacher@eb5494d3/check_email
-    const backendUrl = config?.deployment?.url?.replace(
-      config?.deployment?.hash,
-      config?.deployment?.version
-    )
+    // const backendUrl = config?.deployment?.url?.replace(
+    //   config?.deployment?.hash,
+    //   config?.deployment?.version
+    // )
+    const backendUrl = 'https://api.reacher.email/v0'
 
     let step = 0
     const isSelfHost =
@@ -271,7 +272,10 @@ export class OnboardingSection extends Component {
                       auth={auth}
                       deployment={deployment}
                       project={deployment.project}
-                      service={deployment.services[0]}
+                      service={{
+                        ...deployment.services[0],
+                        url: 'https://api.reacher.email/v0/check_email'
+                      }}
                     />
                     <br />
                   </span>

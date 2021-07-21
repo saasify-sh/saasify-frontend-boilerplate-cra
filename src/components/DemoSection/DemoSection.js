@@ -36,7 +36,10 @@ export class DemoSection extends Component {
           <LiveServiceDemo
             project={deployment.project}
             deployment={deployment}
-            service={deployment.services[0]}
+            service={{
+              ...deployment.services[0],
+              url: 'https://api.reacher.email/v0/check_email'
+            }}
           />
         )}
       </Section>
