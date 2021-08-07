@@ -34,6 +34,7 @@ export class DemoSection extends Component {
           />
         ) : (
           <LiveServiceDemo
+            auth={{ consumer: { token: 'test_api_token' } }}
             project={deployment.project}
             deployment={deployment}
             service={{
