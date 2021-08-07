@@ -23,6 +23,10 @@ export class SignupPage extends Component {
     auth: PropTypes.object.isRequired
   }
 
+  componentWillMount() {
+    window.location.replace('https://app.reacher.email/signup')
+  }
+
   render() {
     if (this.props.auth.isAuthenticated) {
       return handleAuth(this.props)

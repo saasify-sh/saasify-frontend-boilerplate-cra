@@ -20,3 +20,9 @@
   width: 100%;
   max-width: 420px;
 }
+
+.migration {
+  padding: 0.5rem;
+  background-color: #fcdbd3;
+  margin-bottom: 1rem;
+}

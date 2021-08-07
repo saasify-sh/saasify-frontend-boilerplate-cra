@@ -90,7 +90,7 @@ const saasifyConfig = {
               label: 'Log in'
             },
             {
-              to: '/signup',
+              href: 'https://app.reacher.email/signup',
               type: 'primary',
               label: 'Get started'
             }
@@ -118,7 +118,7 @@ const saasifyConfig = {
                 }
               : {
                   label: 'Get started',
-                  to: '/signup'
+                  href: 'https://app.reacher.email/signup'
                 },
           ({ auth }) =>
             auth.isAuthenticated

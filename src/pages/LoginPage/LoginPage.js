@@ -36,6 +36,15 @@ export class LoginPage extends Component {
 
         <div className={theme(styles, 'content')}>
           <Paper className={theme(styles, 'body')}>
+            <div className={theme(styles, 'migration')}>
+              <small>
+                ⚠️ If you have been invited to the new Reacher dashboard, please
+                login at{' '}
+                <a href='https://app.reacher.email/login'>the new login page</a>{' '}
+                instead .
+              </small>
+            </div>
+
             <LoginForm
               onAuth={this._onAuth}
               authParams={authParams}
