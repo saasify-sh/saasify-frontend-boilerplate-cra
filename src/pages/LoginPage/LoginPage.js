@@ -41,7 +41,7 @@ export class LoginPage extends Component {
                 ⚠️ If you have been invited to the new Reacher dashboard, please
                 login at{' '}
                 <a href='https://app.reacher.email/login'>the new login page</a>{' '}
-                instead .
+                instead.
               </small>
             </div>
 
