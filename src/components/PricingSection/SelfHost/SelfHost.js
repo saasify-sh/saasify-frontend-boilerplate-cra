@@ -14,6 +14,8 @@ const plan = plans[2] // self-host
 @observer
 export class SelfHost extends Component {
   render() {
+    const { currency } = this.props
+
     return (
       <PricingPlan
         className={theme(styles, 'plan')}
@@ -22,6 +24,7 @@ export class SelfHost extends Component {
         plan={{
           ...plan,
           context: null, // Remove top section hack.
+          ctaLink: 'https://app.reacher.email/signup',
           name: (
             <span>
               Commercial License
@@ -64,7 +67,7 @@ export class SelfHost extends Component {
             <Divider key='divider' />,
             ...plan.features.slice(5)
           ],
-          price: plan.price
+          price: plan.price.replace('$', currency === 'eur' ? '€' : '$')
         }}
       />
     )

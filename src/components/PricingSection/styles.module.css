@@ -17,3 +17,9 @@
     margin-top: 1em;
   }
 }
+
+.currency {
+  color: var(--hero-color);
+  display: flex;
+  justify-content: flex-end;
+}

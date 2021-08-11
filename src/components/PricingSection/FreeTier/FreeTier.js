@@ -13,6 +13,8 @@ const plan = plans[0] // free-tier
 @observer
 export class FreeTier extends Component {
   render() {
+    const { currency } = this.props
+
     return (
       <PricingPlan
         className={theme(styles, 'plan')}
@@ -20,6 +22,7 @@ export class FreeTier extends Component {
         context={null}
         plan={{
           ...plan,
+          ctaLink: 'https://app.reacher.email/signup',
           name: (
             <span>
               Free Tier
@@ -57,7 +60,7 @@ export class FreeTier extends Component {
             plan.features[2],
             ...plan.features.slice(3)
           ],
-          price: plan.price
+          price: plan.price.replace('$', currency === 'eur' ? '€' : '$')
         }}
       />
     )

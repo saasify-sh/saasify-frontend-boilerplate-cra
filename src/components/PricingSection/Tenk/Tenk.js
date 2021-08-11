@@ -14,12 +14,15 @@ const plan = plans[1]
 @observer
 export class Tenk extends Component {
   render() {
+    const { currency } = this.props
+
     return (
       <PricingPlan
         className={theme(styles, 'plan')}
         key={plan.slug} // 10k-v2
         plan={{
           ...plan,
+          ctaLink: 'https://app.reacher.email/signup',
           name: (
             <span>
               10K Emails (SaaS)
@@ -55,7 +58,8 @@ export class Tenk extends Component {
             <Divider key='divider' />,
             plan.features[2],
             ...plan.features.slice(3)
-          ]
+          ],
+          price: plan.price.replace('$', currency === 'eur' ? '€' : '$')
         }}
       />
     )
