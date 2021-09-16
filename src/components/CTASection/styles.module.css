@@ -1,0 +1,20 @@
+.cta {
+  margin-top: 64px;
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 24px;
+}
+
+.bigmongolian {
+  margin-left: 64px;
+  width: 128px;
+}
+
+.geekflare {
+  margin-right: 64px;
+  width: 256px;
+}
