@@ -33,11 +33,9 @@ import {
   LoginPage,
   LogoutPage,
   SignupPage,
-  CheckoutPage,
 
   // authenticated webapp
-  DashboardPage,
-  AccountPage
+  DashboardPage
 } from './pages'
 
 import deployment from 'lib/deployment'
@@ -62,16 +60,10 @@ const saasifyConfig = {
       return auth.isAuthenticated
         ? [
             {
-              to: '/dashboard',
+              href: 'https://app.reacher.email/dashboard',
               type: 'primary',
               icon: 'home',
               label: 'Dashboard'
-            },
-            {
-              to: '/account',
-              type: 'secondary',
-              icon: 'setting',
-              label: 'Account'
             },
             {
               to: '/logout',
@@ -82,7 +74,7 @@ const saasifyConfig = {
           ]
         : [
             {
-              to: '/login',
+              href: 'https://app.reacher.email/login',
               type: 'secondary',
               label: 'Log in'
             },
@@ -111,7 +103,7 @@ const saasifyConfig = {
             auth.isAuthenticated
               ? {
                   label: 'Dashboard',
-                  to: '/dashboard'
+                  href: 'https://app.reacher.email/dashboard'
                 }
               : {
                   label: 'Get started',
@@ -121,7 +113,7 @@ const saasifyConfig = {
             auth.isAuthenticated
               ? {
                   label: 'Account',
-                  to: '/account'
+                  href: 'https://app.reacher.email/dashboard'
                 }
               : null
         ]
@@ -247,8 +239,8 @@ export default class App extends Component {
               <Route path='/auth/stripe' component={AuthStripePage} />
 
               <AuthenticatedRoute path='/dashboard' component={DashboardPage} />
-              <AuthenticatedRoute path='/account' component={AccountPage} />
-              <AuthenticatedRoute path='/checkout' component={CheckoutPage} />
+              <AuthenticatedRoute path='/account' component={DashboardPage} />
+              <AuthenticatedRoute path='/checkout' component={DashboardPage} />
               <AuthenticatedRoute path='/logout' component={LogoutPage} />
 
               <Route component={NotFoundPage} />

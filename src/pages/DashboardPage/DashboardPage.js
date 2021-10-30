@@ -20,6 +20,10 @@ import styles from './styles.module.css'
 @inject('auth')
 @observer
 export class DashboardPage extends Component {
+  componentWillMount() {
+    window.location.replace('https://app.reacher.email/dashboard')
+  }
+
   render() {
     const { auth } = this.props
 

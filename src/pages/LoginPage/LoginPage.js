@@ -25,6 +25,10 @@ export class LoginPage extends Component {
     auth: PropTypes.object.isRequired
   }
 
+  componentWillMount() {
+    window.location.replace('https://app.reacher.email/login')
+  }
+
   render() {
     if (this.props.auth.isAuthenticated) {
       return handleAuth(this.props)

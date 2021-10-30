@@ -8,6 +8,6 @@ The documentation on this page focuses on the technical side of Reacher. If you 
 
 ### Working with Reacher's API
 
-The first step is to fetch your unique API Auth Token. You can do so in your [accounts page](https://reacher.email/account). Copy the token inside your clipboard.
+The first step is to fetch your unique API Auth Token. You can do so in your [dashboard page](https://app.reacher.email/dashboard). Copy the token inside your clipboard.
 
 The next step is to make a REST API request to the reacher servers. There's only one endpoint for now: check an email. Scroll down to see the [endpoint's specifications](#operation/post-check-email), as well as code snippets using cURL, Node.js, Python and Go.
