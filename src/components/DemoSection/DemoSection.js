@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 
-import { Section, LiveServiceDemo } from 'react-saasify'
+import { Section } from 'react-saasify'
+import { LiveServiceDemo } from './LiveServiceDemo'
 
 // TODO: make service selectable
 
